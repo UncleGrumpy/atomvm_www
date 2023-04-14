@@ -1,0 +1,25 @@
+<map id="/home/runner/work/AtomVM/AtomVM/src/libAtomVM/interop.c" name="/home/runner/work/AtomVM/AtomVM/src/libAtomVM/interop.c">
+<area shape="rect" id="node1" title=" " alt="" coords="296,5,539,47"/>
+<area shape="rect" id="node2" href="$interop_8h.html" title=" " alt="" coords="320,95,400,121"/>
+<area shape="rect" id="node21" href="$defaultatoms_8h.html" title=" " alt="" coords="173,169,294,196"/>
+<area shape="rect" id="node22" href="$tempstack_8h.html" title=" " alt="" coords="425,95,527,121"/>
+<area shape="rect" id="node23" href="$valueshashtable_8h.html" title=" " alt="" coords="552,95,693,121"/>
+<area shape="rect" id="node3" href="$context_8h.html" title="Context struct and related management functions." alt="" coords="319,169,401,196"/>
+<area shape="rect" id="node9" href="$term_8h.html" title="term manipulation functions" alt="" coords="543,319,609,345"/>
+<area shape="rect" id="node4" href="$globalcontext_8h.html" title="GlobalContext struct and related management functions." alt="" coords="180,244,303,271"/>
+<area shape="rect" id="node8" href="$linkedlist_8h.html" title="Linked list manipulation functions." alt="" coords="12,543,105,569"/>
+<area shape="rect" id="node20" href="$timer__wheel_8h.html" title=" " alt="" coords="288,393,403,420"/>
+<area shape="rect" id="node5" title=" " alt="" coords="367,543,438,569"/>
+<area shape="rect" id="node6" href="$atom_8h.html" title="Atoms manipulation functions." alt="" coords="94,468,162,495"/>
+<area shape="rect" id="node7" title=" " alt="" coords="137,617,207,644"/>
+<area shape="rect" id="node10" title=" " alt="" coords="528,468,611,495"/>
+<area shape="rect" id="node11" title=" " alt="" coords="659,393,725,420"/>
+<area shape="rect" id="node12" title=" " alt="" coords="750,393,821,420"/>
+<area shape="rect" id="node13" href="$memory_8h.html" title=" " alt="" coords="897,393,983,420"/>
+<area shape="rect" id="node14" href="$term__typedef_8h.html" title="term type definition" alt="" coords="673,468,794,495"/>
+<area shape="rect" id="node17" href="$utils_8h.html" title="Misc functions and macros." alt="" coords="949,468,1011,495"/>
+<area shape="rect" id="node18" href="$refc__binary_8h.html" title=" " alt="" coords="478,393,583,420"/>
+<area shape="rect" id="node15" title=" " alt="" coords="646,543,717,569"/>
+<area shape="rect" id="node16" title=" " alt="" coords="741,543,827,569"/>
+<area shape="rect" id="node19" href="$list_8h.html" title=" " alt="" coords="297,468,351,495"/>
+</map>
