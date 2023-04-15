@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['refcbinaryisconst_1552',['RefcBinaryIsConst',['../term_8h.html#ada026bf2d0a66c550271f757eef36e1faaed6e89a2b999ac85173ebb98a91831d',1,'term.h']]],
-  ['refcnoflags_1553',['RefcNoFlags',['../term_8h.html#ada026bf2d0a66c550271f757eef36e1fad83c288ca310e2fb8ea0c452e804900f',1,'term.h']]]
+  ['nativeendianinteger_1592',['NativeEndianInteger',['../bitstring_8h.html#a5ed0ea1dd997c35aab7df0e23b577c65a20937275c04b1229c890117a6bb1a24d',1,'bitstring.h']]],
+  ['niffunctiontype_1593',['NIFFunctionType',['../exportedfunction_8h.html#a42a11575cc237e37732d560240e04371a520690de440ea0d9cf76b05340b418a4',1,'exportedfunction.h']]],
+  ['noflags_1594',['NoFlags',['../context_8h.html#a5c9a39ccda8c700b8722f9027ef63f1da58023b588aa8366442fc981c45b9a1b0',1,'context.h']]]
 ];

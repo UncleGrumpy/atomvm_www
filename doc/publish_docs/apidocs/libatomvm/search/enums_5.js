@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['refcbinaryflags_1533',['RefcBinaryFlags',['../term_8h.html#ada026bf2d0a66c550271f757eef36e1f',1,'term.h']]]
+  ['interopfunctionresult_1565',['InteropFunctionResult',['../interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8',1,'interop.h']]]
 ];

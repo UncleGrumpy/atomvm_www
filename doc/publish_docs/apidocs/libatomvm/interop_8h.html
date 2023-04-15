@@ -69,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">interop.h File Reference</div>  </div>
@@ -126,6 +127,14 @@ Macros</h2></td></tr>
 <tr class="memitem:a3ad0dc0d142cc3af5b7bdde779cc8b7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#a3ad0dc0d142cc3af5b7bdde779cc8b7f">SELECT_INT_DEFAULT</a>(i_val)</td></tr>
 <tr class="separator:a3ad0dc0d142cc3af5b7bdde779cc8b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a3f8762f470fb4c0f30adf31db71049f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8">InteropFunctionResult</a> { <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8ab9f38b2cce76a588f209e68e3cb24c13">InteropOk</a>
+, <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8aa0caf1a1b32bceb916c3cf7ad11e6ca6">InteropMemoryAllocFail</a>
+, <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8ab526f8f6007bfe26363ad880fbf38c38">InteropBadArg</a>
+ }</td></tr>
+<tr class="separator:a3f8762f470fb4c0f30adf31db71049f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aae56b92071ee07b8c29cb1b386f35f42"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#aae56b92071ee07b8c29cb1b386f35f42">interop_term_to_string</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, int *ok)</td></tr>
@@ -144,10 +153,10 @@ Functions</h2></td></tr>
 <tr class="separator:a45ab83ff6c4741b3562e303b44d526f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab234e7bdbfea263c22cef8a76890ecc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#ab234e7bdbfea263c22cef8a76890ecc9">interop_map_get_value_default</a> (<a class="el" href="struct_context.html">Context</a> *ctx, <a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> map, <a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> key, <a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> default_value)</td></tr>
 <tr class="separator:ab234e7bdbfea263c22cef8a76890ecc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a933df279c606b537f6067150f0ed7999"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#a933df279c606b537f6067150f0ed7999">interop_iolist_size</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, int *ok)</td></tr>
-<tr class="separator:a933df279c606b537f6067150f0ed7999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10a5f3e88712280eb6b99e11f6d5e781"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#a10a5f3e88712280eb6b99e11f6d5e781">interop_write_iolist</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, char *p)</td></tr>
-<tr class="separator:a10a5f3e88712280eb6b99e11f6d5e781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1d0c4222308feff0725e3c0b555a48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#a455037dd104e81dc7ca55f032431eebc">NO_DISCARD</a> <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8">InteropFunctionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#aee1d0c4222308feff0725e3c0b555a48">interop_iolist_size</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, size_t *size)</td></tr>
+<tr class="separator:aee1d0c4222308feff0725e3c0b555a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d84d5349af074cc72803d094df56e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#a455037dd104e81dc7ca55f032431eebc">NO_DISCARD</a> <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8">InteropFunctionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#a6d84d5349af074cc72803d094df56e72">interop_write_iolist</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, char *p)</td></tr>
+<tr class="separator:a6d84d5349af074cc72803d094df56e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a52c8719e2510d9bca4cf5cae32d6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interop_8h.html#a77a52c8719e2510d9bca4cf5cae32d6c">interop_atom_term_select_int</a> (const <a class="el" href="struct_atom_string_int_pair.html">AtomStringIntPair</a> *table, <a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> atom, <a class="el" href="struct_global_context.html">GlobalContext</a> *global)</td></tr>
 <tr class="memdesc:a77a52c8719e2510d9bca4cf5cae32d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds on a table the first matching atom string.  <a href="interop_8h.html#a77a52c8719e2510d9bca4cf5cae32d6c">More...</a><br /></td></tr>
 <tr class="separator:a77a52c8719e2510d9bca4cf5cae32d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +184,26 @@ Functions</h2></td></tr>
 <div class="line">        .as_val = NULL, i_val     \</div>
 <div class="line">    }</div>
 </div><!-- fragment --><p>An idiomatic macro for marking an <a class="el" href="struct_atom_string_int_pair.html">AtomStringIntPair</a> table entry as a interop_atom_term_select_int default. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a3f8762f470fb4c0f30adf31db71049f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f8762f470fb4c0f30adf31db71049f8">&#9670;&nbsp;</a></span>InteropFunctionResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8">InteropFunctionResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3f8762f470fb4c0f30adf31db71049f8ab9f38b2cce76a588f209e68e3cb24c13"></a>InteropOk&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f8762f470fb4c0f30adf31db71049f8aa0caf1a1b32bceb916c3cf7ad11e6ca6"></a>InteropMemoryAllocFail&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f8762f470fb4c0f30adf31db71049f8ab526f8f6007bfe26363ad880fbf38c38"></a>InteropBadArg&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -270,14 +299,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a933df279c606b537f6067150f0ed7999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a933df279c606b537f6067150f0ed7999">&#9670;&nbsp;</a></span>interop_iolist_size()</h2>
+<a id="aee1d0c4222308feff0725e3c0b555a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1d0c4222308feff0725e3c0b555a48">&#9670;&nbsp;</a></span>interop_iolist_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int interop_iolist_size </td>
+          <td class="memname"><a class="el" href="utils_8h.html#a455037dd104e81dc7ca55f032431eebc">NO_DISCARD</a> <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8">InteropFunctionResult</a> interop_iolist_size </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a>&#160;</td>
           <td class="paramname"><em>t</em>, </td>
@@ -285,8 +314,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>ok</em>&#160;</td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -541,14 +570,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a10a5f3e88712280eb6b99e11f6d5e781"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10a5f3e88712280eb6b99e11f6d5e781">&#9670;&nbsp;</a></span>interop_write_iolist()</h2>
+<a id="a6d84d5349af074cc72803d094df56e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d84d5349af074cc72803d094df56e72">&#9670;&nbsp;</a></span>interop_write_iolist()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int interop_write_iolist </td>
+          <td class="memname"><a class="el" href="utils_8h.html#a455037dd104e81dc7ca55f032431eebc">NO_DISCARD</a> <a class="el" href="interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8">InteropFunctionResult</a> interop_write_iolist </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a>&#160;</td>
           <td class="paramname"><em>t</em>, </td>

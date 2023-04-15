@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Network Programming Guide &mdash; AtomVM 0.6.0-dev+git.673ebac documentation</title>
+  <title>Network Programming Guide &mdash; AtomVM 0.6.0-dev+git.5d73c33 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -127,7 +127,7 @@
 <blockquote>
 <div><p>Note that the station mode SSID and password <em>may</em> be stored in non-volatile storage, in which case these parameters may be skipped.  See the “NVS Credentials” section below, for more information about using non-volatile storage to store credentials that persist across device reboots.</p>
 </div></blockquote>
-<p>The <code class="docutils literal notranslate"><span class="pre">network:start/1</span></code> will immediately return <code class="docutils literal notranslate"><span class="pre">ok</span></code>, if the network was properly initialized, or <code class="docutils literal notranslate"><span class="pre">{error,</span> <span class="pre">Reason}</span></code>, if there was an error in configuration.  However, the application may want to wait for the device to connect to the target network and obtain an IP address, for example, before starting clients or services that require network access.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">network:start/1</span></code> will immediately return <code class="docutils literal notranslate"><span class="pre">{ok,</span> <span class="pre">Pid}</span></code>, where <code class="docutils literal notranslate"><span class="pre">Pid</span></code> is the process ID of the network server instance, if the network was properly initialized, or <code class="docutils literal notranslate"><span class="pre">{error,</span> <span class="pre">Reason}</span></code>, if there was an error in configuration.  However, the application may want to wait for the device to connect to the target network and obtain an IP address, for example, before starting clients or services that require network access.</p>
 <p>Applications can specify callback functions, which get triggered as events emerge from the network layer, including connection to and disconnection from the target network, as well as IP address acquisition.</p>
 <p>Callback functions can be specified by the following configuration parameters:</p>
 <ul class="simple">
@@ -155,7 +155,7 @@ Config = [
         {dhcp_hostname, &lt;&lt;&quot;myesp32&quot;&gt;&gt;}
     ]}
 ],
-ok = network:start(Config),
+{ok, Pid} = network:start(Config),
 ...
 </pre></div>
 </div>
@@ -206,7 +206,7 @@ end
 <blockquote>
 <div><p>Note that the station mode SSID and password <em>may</em> be stored in non-volatile storage, in which case these parameters may be skipped.  See the “NVS Credentials” section below, for more information about using non-volatile storage to store credentials that persist across device reboots.</p>
 </div></blockquote>
-<p>The <code class="docutils literal notranslate"><span class="pre">network:start/1</span></code> will immediately return <code class="docutils literal notranslate"><span class="pre">ok</span></code>, if the network was properly initialized, or <code class="docutils literal notranslate"><span class="pre">{error,</span> <span class="pre">Reason}</span></code>, if there was an error in configuration.  However, the application may want to wait for the device to to be ready to accept connections from other devices, or to be notified when other devices connect to this AP.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">network:start/1</span></code> will immediately return <code class="docutils literal notranslate"><span class="pre">{ok,</span> <span class="pre">Pid}</span></code>, where <code class="docutils literal notranslate"><span class="pre">Pid</span></code> is the process id of the network server, if the network was properly initialized, or <code class="docutils literal notranslate"><span class="pre">{error,</span> <span class="pre">Reason}</span></code>, if there was an error in configuration.  However, the application may want to wait for the device to to be ready to accept connections from other devices, or to be notified when other devices connect to this AP.</p>
 <p>Applications can specify callback functions, which get triggered as events emerge from the network layer, including when a station connects or disconnects from the AP, as well as when a station is assigned an IP address.</p>
 <p>Callback functions can be specified by the following configuration parameters:</p>
 <ul class="simple">
@@ -236,7 +236,7 @@ Config = [
         {sta_disconnected, fun sta_disconnected/1},
     ]}
 ],
-ok = network:start(Config),
+{ok, Pid} = network:start(Config),
 ...
 </pre></div>
 </div>

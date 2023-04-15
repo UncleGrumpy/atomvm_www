@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unresolvedfunctioncall_1555',['UnresolvedFunctionCall',['../exportedfunction_8h.html#a42a11575cc237e37732d560240e04371a248d26514e2dc649afea1d8d30e2f3fd',1,'exportedfunction.h']]]
+  ['signedinteger_1597',['SignedInteger',['../bitstring_8h.html#a5ed0ea1dd997c35aab7df0e23b577c65a68d0e481abfbd1cfd012e19a69dd3d65',1,'bitstring.h']]]
 ];

@@ -227,6 +227,10 @@ Macros</h2></td></tr>
 <tr class="separator:a3de30c0bd38e2e31ec36b72fd749a906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae255fde495724a05463b14aaafe1cb94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#ae255fde495724a05463b14aaafe1cb94">TYPEDEF_GLOBALCONTEXT</a></td></tr>
 <tr class="separator:ae255fde495724a05463b14aaafe1cb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b9e2d39d00df1a1017a470d40b5a21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#ac5b9e2d39d00df1a1017a470d40b5a21">TERM_MAP_NOT_FOUND</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:ac5b9e2d39d00df1a1017a470d40b5a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac666c95980d794db07c3818bc593a037"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#ac666c95980d794db07c3818bc593a037">TERM_MAP_MEMORY_ALLOC_FAIL</a>&#160;&#160;&#160;-2</td></tr>
+<tr class="separator:ac666c95980d794db07c3818bc593a037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -243,12 +247,22 @@ Enumerations</h2></td></tr>
 , <a class="el" href="term_8h.html#ada026bf2d0a66c550271f757eef36e1faaed6e89a2b999ac85173ebb98a91831d">RefcBinaryIsConst</a>
  }</td></tr>
 <tr class="separator:ada026bf2d0a66c550271f757eef36e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabf9d87ccf85c239412dbf6631cb21d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#acabf9d87ccf85c239412dbf6631cb21d">TermCompareOpts</a> { <a class="el" href="term_8h.html#acabf9d87ccf85c239412dbf6631cb21da539e8b4ce48535c87117884bcd5562ca">TermCompareNoOpts</a> = 0
+, <a class="el" href="term_8h.html#acabf9d87ccf85c239412dbf6631cb21da0c51a342f0fd479f41e91cec31ee4280">TermCompareExact</a> = 1
+ }</td></tr>
+<tr class="separator:acabf9d87ccf85c239412dbf6631cb21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af889a9d5a2c9162aaf7dd1c0e1f45c4a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4a">TermCompareResult</a> { <a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4aa6bde54f57c6eff8185efadfb9d353ef4">TermCompareMemoryAllocFail</a> = 0
+, <a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4aaea6f485013ae7d90be4bc10733c1a6c6">TermEquals</a> = 1
+, <a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4aa879beb240ca0a6dae8f35a579b6f0bb2">TermLessThan</a> = 2
+, <a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4aa7fa873cb4d324414562b5f050dae8874">TermGreaterThan</a> = 4
+ }</td></tr>
+<tr class="separator:af889a9d5a2c9162aaf7dd1c0e1f45c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a83ed6e65d8ae88bce317267ff9df339b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#a83ed6e65d8ae88bce317267ff9df339b">term_compare</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, <a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> other, <a class="el" href="struct_context.html">Context</a> *ctx)</td></tr>
-<tr class="memdesc:a83ed6e65d8ae88bce317267ff9df339b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two terms.  <a href="term_8h.html#a83ed6e65d8ae88bce317267ff9df339b">More...</a><br /></td></tr>
-<tr class="separator:a83ed6e65d8ae88bce317267ff9df339b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28711edef0c7dc12d57d1b0dad50cb7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4a">TermCompareResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#a28711edef0c7dc12d57d1b0dad50cb7c">term_compare</a> (<a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> t, <a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a> other, <a class="el" href="term_8h.html#acabf9d87ccf85c239412dbf6631cb21d">TermCompareOpts</a> opts, <a class="el" href="struct_global_context.html">GlobalContext</a> *global)</td></tr>
+<tr class="memdesc:a28711edef0c7dc12d57d1b0dad50cb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two terms.  <a href="term_8h.html#a28711edef0c7dc12d57d1b0dad50cb7c">More...</a><br /></td></tr>
+<tr class="separator:a28711edef0c7dc12d57d1b0dad50cb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1589215493920ba8650c4fa792298465"><td class="memItemLeft" align="right" valign="top"><a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="term_8h.html#a1589215493920ba8650c4fa792298465">term_alloc_refc_binary</a> (<a class="el" href="struct_context.html">Context</a> *ctx, size_t size, bool is_const)</td></tr>
 <tr class="memdesc:a1589215493920ba8650c4fa792298465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a reference-counted binary on the heap.  <a href="term_8h.html#a1589215493920ba8650c4fa792298465">More...</a><br /></td></tr>
 <tr class="separator:a1589215493920ba8650c4fa792298465"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -680,6 +694,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ac666c95980d794db07c3818bc593a037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac666c95980d794db07c3818bc593a037">&#9670;&nbsp;</a></span>TERM_MAP_MEMORY_ALLOC_FAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TERM_MAP_MEMORY_ALLOC_FAIL&#160;&#160;&#160;-2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5b9e2d39d00df1a1017a470d40b5a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b9e2d39d00df1a1017a470d40b5a21">&#9670;&nbsp;</a></span>TERM_MAP_NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TERM_MAP_NOT_FOUND&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a476d7e8af59a33c4b1a710660e8edd61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a476d7e8af59a33c4b1a710660e8edd61">&#9670;&nbsp;</a></span>TUPLE_SIZE</h2>
 
@@ -770,6 +812,44 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ada026bf2d0a66c550271f757eef36e1fad83c288ca310e2fb8ea0c452e804900f"></a>RefcNoFlags&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ada026bf2d0a66c550271f757eef36e1faaed6e89a2b999ac85173ebb98a91831d"></a>RefcBinaryIsConst&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="acabf9d87ccf85c239412dbf6631cb21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acabf9d87ccf85c239412dbf6631cb21d">&#9670;&nbsp;</a></span>TermCompareOpts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="term_8h.html#acabf9d87ccf85c239412dbf6631cb21d">TermCompareOpts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acabf9d87ccf85c239412dbf6631cb21da539e8b4ce48535c87117884bcd5562ca"></a>TermCompareNoOpts&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acabf9d87ccf85c239412dbf6631cb21da0c51a342f0fd479f41e91cec31ee4280"></a>TermCompareExact&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="af889a9d5a2c9162aaf7dd1c0e1f45c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af889a9d5a2c9162aaf7dd1c0e1f45c4a">&#9670;&nbsp;</a></span>TermCompareResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4a">TermCompareResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af889a9d5a2c9162aaf7dd1c0e1f45c4aa6bde54f57c6eff8185efadfb9d353ef4"></a>TermCompareMemoryAllocFail&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af889a9d5a2c9162aaf7dd1c0e1f45c4aaea6f485013ae7d90be4bc10733c1a6c6"></a>TermEquals&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af889a9d5a2c9162aaf7dd1c0e1f45c4aa879beb240ca0a6dae8f35a579b6f0bb2"></a>TermLessThan&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af889a9d5a2c9162aaf7dd1c0e1f45c4aa7fa873cb4d324414562b5f050dae8874"></a>TermGreaterThan&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -872,14 +952,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a83ed6e65d8ae88bce317267ff9df339b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83ed6e65d8ae88bce317267ff9df339b">&#9670;&nbsp;</a></span>term_compare()</h2>
+<a id="a28711edef0c7dc12d57d1b0dad50cb7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28711edef0c7dc12d57d1b0dad50cb7c">&#9670;&nbsp;</a></span>term_compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int term_compare </td>
+          <td class="memname"><a class="el" href="term_8h.html#af889a9d5a2c9162aaf7dd1c0e1f45c4a">TermCompareResult</a> term_compare </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8">term</a>&#160;</td>
           <td class="paramname"><em>t</em>, </td>
@@ -893,8 +973,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_context.html">Context</a> *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="term_8h.html#acabf9d87ccf85c239412dbf6631cb21d">TermCompareOpts</a>&#160;</td>
+          <td class="paramname"><em>opts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_global_context.html">GlobalContext</a> *&#160;</td>
+          <td class="paramname"><em>global</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -909,10 +995,11 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">t</td><td>the first term </td></tr>
     <tr><td class="paramname">other</td><td>the second term </td></tr>
+    <tr><td class="paramname">global</td><td>the global context </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 when given terms are equals, otherwise -1 when t &lt; other, or 1 when t &gt; other. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>any of TermEquals, TermLessThan, TermGreaterThan or TermCompareMemoryAllocFail error. </dd></dl>
 
 </div>
 </div>
