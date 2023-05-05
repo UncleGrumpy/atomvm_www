@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bif.c &mdash; AtomVM 0.6.0-dev+git.19646f4 documentation</title>
+  <title>bif.c &mdash; AtomVM 0.6.0-dev+git.9c2dfaf documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -52,6 +52,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../welcome-to-atomvm.html">Welcome to AtomVM!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../getting-started-guide.html">Getting Started Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../programmers-guide.html">Programmers Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../example-programs.html">Example Programs</a></li>
@@ -135,7 +136,8 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
         </div>
@@ -281,6 +283,16 @@
 <span class="target" id="bif_8c_1a69bd4b915966835c42a2b14b8c91483f"></span><span class="sig-name descname"><span class="n"><span class="pre">VALIDATE_VALUE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">value</span></span>, <span class="n"><span class="pre">verify_function</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.VALIDATE_VALUE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.INT64_MIN_AS_FLOAT">
+<span class="target" id="bif_8c_1ac33cab5732585d5f38203f827f09feec"></span><span class="sig-name descname"><span class="n"><span class="pre">INT64_MIN_AS_FLOAT</span></span></span><a class="headerlink" href="#c.INT64_MIN_AS_FLOAT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.INT64_MAX_AS_FLOAT">
+<span class="target" id="bif_8c_1a97a9859ce7e3a8a916ead494813ec7cb"></span><span class="sig-name descname"><span class="n"><span class="pre">INT64_MAX_AS_FLOAT</span></span></span><a class="headerlink" href="#c.INT64_MAX_AS_FLOAT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
@@ -335,6 +347,16 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv423bif_erlang_is_boolean_1P7Context4term">
 <span id="_CPPv323bif_erlang_is_boolean_1P7Context4term"></span><span id="_CPPv223bif_erlang_is_boolean_1P7Context4term"></span><span id="bif_erlang_is_boolean_1__ContextP.term"></span><span class="target" id="bif_8c_1ad7c28eda2b442822d7b9b9bfac4da965"></span><a class="reference internal" href="term_typedef.h.html#_CPPv44term" title="term"><span class="n"><span class="pre">term</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bif_erlang_is_boolean_1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="context.h.html#_CPPv47Context" title="Context"><span class="n"><span class="pre">Context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ctx</span></span>, <a class="reference internal" href="term_typedef.h.html#_CPPv44term" title="term"><span class="n"><span class="pre">term</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bif_erlang_is_boolean_1P7Context4term" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421bif_erlang_is_float_1P7Context4term">
+<span id="_CPPv321bif_erlang_is_float_1P7Context4term"></span><span id="_CPPv221bif_erlang_is_float_1P7Context4term"></span><span id="bif_erlang_is_float_1__ContextP.term"></span><span class="target" id="bif_8c_1a0b7eb02844af4a84b5f90cb2e66bcbc4"></span><a class="reference internal" href="term_typedef.h.html#_CPPv44term" title="term"><span class="n"><span class="pre">term</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bif_erlang_is_float_1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="context.h.html#_CPPv47Context" title="Context"><span class="n"><span class="pre">Context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ctx</span></span>, <a class="reference internal" href="term_typedef.h.html#_CPPv44term" title="term"><span class="n"><span class="pre">term</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bif_erlang_is_float_1P7Context4term" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424bif_erlang_is_function_1P7Context4term">
+<span id="_CPPv324bif_erlang_is_function_1P7Context4term"></span><span id="_CPPv224bif_erlang_is_function_1P7Context4term"></span><span id="bif_erlang_is_function_1__ContextP.term"></span><span class="target" id="bif_8c_1addcd8fceece516949f48e1cb890562d1"></span><a class="reference internal" href="term_typedef.h.html#_CPPv44term" title="term"><span class="n"><span class="pre">term</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bif_erlang_is_function_1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="context.h.html#_CPPv47Context" title="Context"><span class="n"><span class="pre">Context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ctx</span></span>, <a class="reference internal" href="term_typedef.h.html#_CPPv44term" title="term"><span class="n"><span class="pre">term</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bif_erlang_is_function_1P7Context4term" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -716,53 +738,9 @@
       <dl>
         <dt>Versions</dt>
         
-          
-          <dd><a href="/atomvm_www/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
            <strong> 
-          <dd><a href="/atomvm_www/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/live_test/">live_test</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/atomvm_www/doc/master/">master</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

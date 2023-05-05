@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>memory.h &mdash; AtomVM 0.6.0-dev+git.19646f4 documentation</title>
+  <title>memory.h &mdash; AtomVM 0.6.0-dev+git.9c2dfaf documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -52,6 +52,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../welcome-to-atomvm.html">Welcome to AtomVM!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../getting-started-guide.html">Getting Started Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../programmers-guide.html">Programmers Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../example-programs.html">Example Programs</a></li>
@@ -135,7 +136,8 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Changelog</a></li>
 </ul>
 
         </div>
@@ -401,22 +403,38 @@
 
 </dd></dl>
 
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv416MemoryShrinkMode">
+<span id="_CPPv316MemoryShrinkMode"></span><span id="_CPPv216MemoryShrinkMode"></span><span class="target" id="memory_8h_1a4d9af0045c6769f6c6a58128a9e85167"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MemoryShrinkMode</span></span></span><a class="headerlink" href="#_CPPv416MemoryShrinkMode" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16MemoryShrinkMode16MEMORY_NO_SHRINKE">
+<span id="_CPPv3N16MemoryShrinkMode16MEMORY_NO_SHRINKE"></span><span id="_CPPv2N16MemoryShrinkMode16MEMORY_NO_SHRINKE"></span><span class="target" id="memory_8h_1a4d9af0045c6769f6c6a58128a9e85167a4f22a4c14101be7b3fe4fa54adcadd1c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MEMORY_NO_SHRINK</span></span></span><a class="headerlink" href="#_CPPv4N16MemoryShrinkMode16MEMORY_NO_SHRINKE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16MemoryShrinkMode17MEMORY_CAN_SHRINKE">
+<span id="_CPPv3N16MemoryShrinkMode17MEMORY_CAN_SHRINKE"></span><span id="_CPPv2N16MemoryShrinkMode17MEMORY_CAN_SHRINKE"></span><span class="target" id="memory_8h_1a4d9af0045c6769f6c6a58128a9e85167a60f35c55b5fa2d4850516dcbd5a63427"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MEMORY_CAN_SHRINK</span></span></span><a class="headerlink" href="#_CPPv4N16MemoryShrinkMode17MEMORY_CAN_SHRINKE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16MemoryShrinkMode19MEMORY_FORCE_SHRINKE">
+<span id="_CPPv3N16MemoryShrinkMode19MEMORY_FORCE_SHRINKE"></span><span id="_CPPv2N16MemoryShrinkMode19MEMORY_FORCE_SHRINKE"></span><span class="target" id="memory_8h_1a4d9af0045c6769f6c6a58128a9e85167a9205a5d2be2260c281bf467b6c45936f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MEMORY_FORCE_SHRINK</span></span></span><a class="headerlink" href="#_CPPv4N16MemoryShrinkMode19MEMORY_FORCE_SHRINKE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="memory_8h_1a950a76e8f6dcedfb2d5269b75722cc74"></span><span class="sig-name descname"><span class="pre">MALLOC_LIKE</span> <span class="pre">term</span> <span class="pre">*</span> <span class="pre">memory_heap_alloc</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">uint32_t</span> <span class="pre">size)</span></span></dt>
+<span class="target" id="memory_8h_1ac170e85f146454d7e60e4cfb07f5d248"></span><span class="sig-name descname"><span class="pre">MALLOC_LIKE</span> <span class="pre">term</span> <span class="pre">*</span> <span class="pre">memory_heap_alloc</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">size_t</span> <span class="pre">size)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="memory_8h_1a452ee53b7c842b12b322879f83452337"></span><span class="sig-name descname"><span class="pre">MALLOC_LIKE</span> <span class="pre">term</span> <span class="pre">*</span> <span class="pre">memory_alloc_heap_fragment</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">uint32_t</span> <span class="pre">size)</span></span></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv49memory_gcP7Contexti">
-<span id="_CPPv39memory_gcP7Contexti"></span><span id="_CPPv29memory_gcP7Contexti"></span><span id="memory_gc__ContextP.i"></span><span class="target" id="memory_8h_1a97856c1cbf755ee8289264e0490bf569"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414MemoryGCResult" title="MemoryGCResult"><span class="n"><span class="pre">MemoryGCResult</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">memory_gc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="context.h.html#_CPPv47Context" title="Context"><span class="n"><span class="pre">Context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ctx</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">new_size</span></span><span class="sig-paren">)</span><br /></dt>
+<span class="target" id="memory_8h_1abe87a1712a53525ea0c3d3a20d12a654"></span><span class="sig-name descname"><span class="pre">MALLOC_LIKE</span> <span class="pre">term</span> <span class="pre">*</span> <span class="pre">memory_alloc_heap_fragment</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">size_t</span> <span class="pre">size)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -426,12 +444,17 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="memory_8h_1a402ba6127dafef491e436de8ac43bbad"></span><span class="sig-name descname"><span class="pre">enum</span> <span class="pre">MemoryGCResult</span> <span class="pre">memory_ensure_free</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">uint32_t</span> <span class="pre">size)</span> <span class="pre">MUST_CHECK</span></span></dt>
+<span class="target" id="memory_8h_1a797189e9bd307b1e9d118d7358f3622b"></span><span class="sig-name descname"><span class="pre">enum</span> <span class="pre">MemoryGCResult</span> <span class="pre">memory_ensure_free_with_roots</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">size_t</span> <span class="pre">size,</span> <span class="pre">size_t</span> <span class="pre">num_roots,</span> <span class="pre">term</span> <span class="pre">*roots,</span> <span class="pre">enum</span> <span class="pre">MemoryShrinkMode</span> <span class="pre">shrink_mode)</span> <span class="pre">MUST_CHECK</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="memory_8h_1af102d01b3f88b42930833732abb1da20"></span><span class="sig-name descname"><span class="pre">enum</span> <span class="pre">MemoryGCResult</span> <span class="pre">memory_gc_and_shrink</span> <span class="pre">(Context</span> <span class="pre">*ctx)</span> <span class="pre">MUST_CHECK</span></span></dt>
+<span class="target" id="memory_8h_1a8b15494981b005f82b02e1351fd1ad96"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">inline</span> <span class="pre">MUST_CHECK</span> <span class="pre">enum</span> <span class="pre">MemoryGCResult</span> <span class="pre">memory_ensure_free_opt</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">size_t</span> <span class="pre">size,</span> <span class="pre">enum</span> <span class="pre">MemoryShrinkMode</span> <span class="pre">shrink_mode)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="memory_8h_1a4770c1a1565b6b8472167c6881993ee0"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">inline</span> <span class="pre">MUST_CHECK</span> <span class="pre">enum</span> <span class="pre">MemoryGCResult</span> <span class="pre">memory_ensure_free</span> <span class="pre">(Context</span> <span class="pre">*ctx,</span> <span class="pre">size_t</span> <span class="pre">size)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -493,53 +516,9 @@
       <dl>
         <dt>Versions</dt>
         
-          
-          <dd><a href="/atomvm_www/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
            <strong> 
-          <dd><a href="/atomvm_www/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/live_test/">live_test</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/atomvm_www/doc/master/">master</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/atomvm_www/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       
