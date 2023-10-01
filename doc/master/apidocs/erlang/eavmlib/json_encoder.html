@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module json_encoder &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Module json_encoder &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -69,15 +69,16 @@
 <li class="toctree-l4"><a class="reference internal" href="atomvm.html">Module atomvm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="avm_pubsub.html">Module avm_pubsub</a></li>
 <li class="toctree-l4"><a class="reference internal" href="console.html">Module console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="emscripten.html">Module emscripten</a></li>
 <li class="toctree-l4"><a class="reference internal" href="esp.html">Module esp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio.html">Module gpio</a></li>
 <li class="toctree-l4"><a class="reference internal" href="http_server.html">Module http_server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c.html">Module i2c</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Module json_encoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ledc.html">Module ledc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logger.html">Module logger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network.html">Module network</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network_fsm.html">Module network_fsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pico.html">Module pico</a></li>
 <li class="toctree-l4"><a class="reference internal" href="port.html">Module port</a></li>
 <li class="toctree-l4"><a class="reference internal" href="spi.html">Module spi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="timestamp_util.html">Module timestamp_util</a></li>
@@ -114,6 +115,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">Module json_encoder</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/eavmlib/json_encoder.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -122,23 +124,35 @@
            <div itemprop="articleBody">
              
   <section id="module-json-encoder">
-<h1>Module json_encoder<a class="headerlink" href="#module-json-encoder" title="Permalink to this heading"></a></h1>
+<h1>Module json_encoder<a class="headerlink" href="#module-json-encoder" title="Link to this heading"></a></h1>
 <ul class="simple">
+<li><p><a class="reference internal" href="../estdlib/unicode.html#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="#index"><span class="xref myst">Function Index</span></a></p></li>
 <li><p><a class="reference internal" href="../../../memory-management.html#functions"><span class="std std-ref">Function Details</span></a></p></li>
 </ul>
-<p><a name="index"></a></p>
+<p>JSON specific APIs.</p>
+<p><a name="description"></a></p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>This module contains functions for working with json data.<a name="index"></a></p>
+</section>
 <section id="function-index">
-<h2>Function Index<a class="headerlink" href="#function-index" title="Permalink to this heading"></a></h2>
-<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#encode-1">encode/1</a></td><td></td></tr></table>
+<h2>Function Index<a class="headerlink" href="#function-index" title="Link to this heading"></a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#encode-1">encode/1</a></td><td>Convert data to json encoded binary.</td></tr></table>
 <p><a name="functions"></a></p>
 </section>
 <section id="function-details">
-<h2>Function Details<a class="headerlink" href="#function-details" title="Permalink to this heading"></a></h2>
+<h2>Function Details<a class="headerlink" href="#function-details" title="Link to this heading"></a></h2>
 <p><a name="encode-1"></a></p>
 <section id="encode-1">
-<h3>encode/1<a class="headerlink" href="#encode-1" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">encode(Value)</span> <span class="pre">-&gt;</span> <span class="pre">any()</span></code></p>
+<h3>encode/1<a class="headerlink" href="#encode-1" title="Link to this heading"></a></h3>
+<pre><code>
+encode(Data::any()) -&gt; binary()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">Data</span></code>: data to encode to json<br /></p>
+<p>returns: JSON encoded data</p>
+<p>Convert data to json encoded binary</p>
 </section>
 </section>
 </section>
@@ -190,56 +204,16 @@
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

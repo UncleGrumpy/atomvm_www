@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The eavmlib library &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>The eavmlib library &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,16 +14,16 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Module atomvm" href="atomvm.html" />
-    <link rel="prev" title="Module timer" href="../estdlib/timer.html" /> 
+    <link rel="prev" title="Module unicode" href="../estdlib/unicode.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -69,15 +69,16 @@
 <li class="toctree-l4"><a class="reference internal" href="atomvm.html">Module atomvm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="avm_pubsub.html">Module avm_pubsub</a></li>
 <li class="toctree-l4"><a class="reference internal" href="console.html">Module console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="emscripten.html">Module emscripten</a></li>
 <li class="toctree-l4"><a class="reference internal" href="esp.html">Module esp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio.html">Module gpio</a></li>
 <li class="toctree-l4"><a class="reference internal" href="http_server.html">Module http_server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c.html">Module i2c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json_encoder.html">Module json_encoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ledc.html">Module ledc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logger.html">Module logger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network.html">Module network</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network_fsm.html">Module network_fsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pico.html">Module pico</a></li>
 <li class="toctree-l4"><a class="reference internal" href="port.html">Module port</a></li>
 <li class="toctree-l4"><a class="reference internal" href="spi.html">Module spi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="timestamp_util.html">Module timestamp_util</a></li>
@@ -114,6 +115,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">The eavmlib library</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/eavmlib/README.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -122,22 +124,23 @@
            <div itemprop="articleBody">
              
   <section id="the-eavmlib-library">
-<h1>The eavmlib library<a class="headerlink" href="#the-eavmlib-library" title="Permalink to this heading"></a></h1>
+<h1>The eavmlib library<a class="headerlink" href="#the-eavmlib-library" title="Link to this heading"></a></h1>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h2>
 <table width="100%" border="0" summary="list of modules">
 <tr><td><a href="atomvm.html" class="module">atomvm</a></td></tr>
 <tr><td><a href="avm_pubsub.html" class="module">avm_pubsub</a></td></tr>
 <tr><td><a href="console.html" class="module">console</a></td></tr>
+<tr><td><a href="emscripten.html" class="module">emscripten</a></td></tr>
 <tr><td><a href="esp.html" class="module">esp</a></td></tr>
 <tr><td><a href="gpio.html" class="module">gpio</a></td></tr>
 <tr><td><a href="http_server.html" class="module">http_server</a></td></tr>
 <tr><td><a href="i2c.html" class="module">i2c</a></td></tr>
 <tr><td><a href="json_encoder.html" class="module">json_encoder</a></td></tr>
 <tr><td><a href="ledc.html" class="module">ledc</a></td></tr>
-<tr><td><a href="logger.html" class="module">logger</a></td></tr>
 <tr><td><a href="network.html" class="module">network</a></td></tr>
 <tr><td><a href="network_fsm.html" class="module">network_fsm</a></td></tr>
+<tr><td><a href="pico.html" class="module">pico</a></td></tr>
 <tr><td><a href="port.html" class="module">port</a></td></tr>
 <tr><td><a href="spi.html" class="module">spi</a></td></tr>
 <tr><td><a href="timestamp_util.html" class="module">timestamp_util</a></td></tr>
@@ -149,7 +152,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../estdlib/timer.html" class="btn btn-neutral float-left" title="Module timer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../estdlib/unicode.html" class="btn btn-neutral float-left" title="Module unicode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="atomvm.html" class="btn btn-neutral float-right" title="Module atomvm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -192,56 +195,16 @@
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

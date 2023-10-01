@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module timestamp_util &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Module timestamp_util &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -69,15 +69,16 @@
 <li class="toctree-l4"><a class="reference internal" href="atomvm.html">Module atomvm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="avm_pubsub.html">Module avm_pubsub</a></li>
 <li class="toctree-l4"><a class="reference internal" href="console.html">Module console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="emscripten.html">Module emscripten</a></li>
 <li class="toctree-l4"><a class="reference internal" href="esp.html">Module esp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio.html">Module gpio</a></li>
 <li class="toctree-l4"><a class="reference internal" href="http_server.html">Module http_server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c.html">Module i2c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json_encoder.html">Module json_encoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ledc.html">Module ledc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logger.html">Module logger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network.html">Module network</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network_fsm.html">Module network_fsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pico.html">Module pico</a></li>
 <li class="toctree-l4"><a class="reference internal" href="port.html">Module port</a></li>
 <li class="toctree-l4"><a class="reference internal" href="spi.html">Module spi</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Module timestamp_util</a></li>
@@ -114,6 +115,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">Module timestamp_util</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/eavmlib/timestamp_util.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -122,9 +124,9 @@
            <div itemprop="articleBody">
              
   <section id="module-timestamp-util">
-<h1>Module timestamp_util<a class="headerlink" href="#module-timestamp-util" title="Permalink to this heading"></a></h1>
+<h1>Module timestamp_util<a class="headerlink" href="#module-timestamp-util" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="../estdlib/string.html#description"><span class="std std-ref">Description</span></a></p></li>
+<li><p><a class="reference internal" href="../estdlib/unicode.html#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="../../libatomvm/types.html#types"><span class="std std-ref">Data Types</span></a></p></li>
 <li><p><a class="reference internal" href="#index"><span class="xref myst">Function Index</span></a></p></li>
 <li><p><a class="reference internal" href="../../../memory-management.html#functions"><span class="std std-ref">Function Details</span></a></p></li>
@@ -132,7 +134,7 @@
 <p>Utility functions for comparing timestamps.</p>
 <p><a name="description"></a></p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p>This module contains functions that are useful for comparing
 timestamps without running the risk of integer overflow.</p>
 <p>Note that the functions in this module may be obsoleted in
@@ -141,27 +143,27 @@ is added; however, the functions may still be useful in their own right.
 <a name="types"></a></p>
 </section>
 <section id="data-types">
-<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading"></a></h2>
+<h2>Data Types<a class="headerlink" href="#data-types" title="Link to this heading"></a></h2>
 <section id="megasecs">
-<h3><a name="type-megasecs">megasecs()</a><a class="headerlink" href="#megasecs" title="Permalink to this heading"></a></h3>
+<h3><a name="type-megasecs">megasecs()</a><a class="headerlink" href="#megasecs" title="Link to this heading"></a></h3>
 <pre><code>
 megasecs() = integer()
 </code></pre>
 </section>
 <section id="microsecs">
-<h3><a name="type-microsecs">microsecs()</a><a class="headerlink" href="#microsecs" title="Permalink to this heading"></a></h3>
+<h3><a name="type-microsecs">microsecs()</a><a class="headerlink" href="#microsecs" title="Link to this heading"></a></h3>
 <pre><code>
 microsecs() = integer()
 </code></pre>
 </section>
 <section id="secs">
-<h3><a name="type-secs">secs()</a><a class="headerlink" href="#secs" title="Permalink to this heading"></a></h3>
+<h3><a name="type-secs">secs()</a><a class="headerlink" href="#secs" title="Link to this heading"></a></h3>
 <pre><code>
 secs() = integer()
 </code></pre>
 </section>
 <section id="timestamp">
-<h3><a name="type-timestamp">timestamp()</a><a class="headerlink" href="#timestamp" title="Permalink to this heading"></a></h3>
+<h3><a name="type-timestamp">timestamp()</a><a class="headerlink" href="#timestamp" title="Link to this heading"></a></h3>
 <pre><code>
 timestamp() = {<a href="#type-megasecs">megasecs()</a>, <a href="#type-secs">secs()</a>, <a href="#type-microsecs">microsecs()</a>}
 </code></pre>
@@ -169,15 +171,15 @@ timestamp() = {<a href="#type-megasecs">megasecs()</a>, <a href="#type-secs">sec
 </section>
 </section>
 <section id="function-index">
-<h2>Function Index<a class="headerlink" href="#function-index" title="Permalink to this heading"></a></h2>
+<h2>Function Index<a class="headerlink" href="#function-index" title="Link to this heading"></a></h2>
 <table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#delta-2">delta/2</a></td><td>    Computes the difference between TS2 and TS1, as a timestamp.</td></tr><tr><td valign="top"><a href="#delta_ms-2">delta_ms/2</a></td><td>    Computes the difference between TS2 and TS1, in milliseconds.</td></tr></table>
 <p><a name="functions"></a></p>
 </section>
 <section id="function-details">
-<h2>Function Details<a class="headerlink" href="#function-details" title="Permalink to this heading"></a></h2>
+<h2>Function Details<a class="headerlink" href="#function-details" title="Link to this heading"></a></h2>
 <p><a name="delta-2"></a></p>
 <section id="delta-2">
-<h3>delta/2<a class="headerlink" href="#delta-2" title="Permalink to this heading"></a></h3>
+<h3>delta/2<a class="headerlink" href="#delta-2" title="Link to this heading"></a></h3>
 <pre><code>
 delta(TS2::<a href="#type-timestamp">timestamp()</a>, TS1::<a href="#type-timestamp">timestamp()</a>) -&gt; <a href="#type-timestamp">timestamp()</a>
 </code></pre>
@@ -188,7 +190,7 @@ delta(TS2::<a href="#type-timestamp">timestamp()</a>, TS1::<a href="#type-timest
 <p><a name="delta_ms-2"></a></p>
 </section>
 <section id="delta-ms-2">
-<h3>delta_ms/2<a class="headerlink" href="#delta-ms-2" title="Permalink to this heading"></a></h3>
+<h3>delta_ms/2<a class="headerlink" href="#delta-ms-2" title="Link to this heading"></a></h3>
 <pre><code>
 delta_ms(TS2::<a href="#type-timestamp">timestamp()</a>, TS1::<a href="#type-timestamp">timestamp()</a>) -&gt; integer()
 </code></pre>
@@ -247,56 +249,16 @@ delta_ms(TS2::<a href="#type-timestamp">timestamp()</a>, TS1::<a href="#type-tim
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['printer_5ffunction_5ft_1559',['printer_function_t',['../term_8h.html#ace4b16a7115bc3936655d1b0936210f6',1,'term.h']]],
-  ['printerfun_1560',['PrinterFun',['../term_8h.html#a8142fcb1f62b21f337b44488f5c1d717',1,'term.h']]]
+  ['heap_2069',['Heap',['../mailbox_8h.html#a705af815969c97892c0aaaa658f6c88c',1,'Heap():&#160;mailbox.h'],['../memory_8h.html#a705af815969c97892c0aaaa658f6c88c',1,'Heap():&#160;memory.h']]],
+  ['heapfragment_2070',['HeapFragment',['../memory_8h.html#a72e25f246c00c73366703f9e45899906',1,'memory.h']]]
 ];

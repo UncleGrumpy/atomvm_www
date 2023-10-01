@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['native_5fhandler_5ff_1557',['native_handler_f',['../context_8h.html#a86bcf5a60889599f7f7aa9493c8f3644',1,'context.h']]],
-  ['nifimpl_1558',['NifImpl',['../exportedfunction_8h.html#ae954446dc6fccb026fcee45aaf13a34f',1,'exportedfunction.h']]]
+  ['gcbifimpl1_2065',['GCBifImpl1',['../exportedfunction_8h.html#a9fa2c169f6c196639d2f315edf1b920d',1,'exportedfunction.h']]],
+  ['gcbifimpl2_2066',['GCBifImpl2',['../exportedfunction_8h.html#ad57b27c664642df763bffb5cdbcdc155',1,'exportedfunction.h']]],
+  ['gcbifimpl3_2067',['GCBifImpl3',['../exportedfunction_8h.html#aca9f6d050d1152bad55dc4833a3f2f14',1,'exportedfunction.h']]],
+  ['globalcontext_2068',['GlobalContext',['../memory_8h.html#ae21a02a8cb159bd3d9eeba3a1dc89580',1,'GlobalContext():&#160;memory.h'],['../resources_8h.html#ae21a02a8cb159bd3d9eeba3a1dc89580',1,'GlobalContext():&#160;resources.h'],['../smp_8h.html#ae21a02a8cb159bd3d9eeba3a1dc89580',1,'GlobalContext():&#160;smp.h']]]
 ];

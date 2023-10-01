@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['refcbinaryisconst_1605',['RefcBinaryIsConst',['../term_8h.html#ada026bf2d0a66c550271f757eef36e1faaed6e89a2b999ac85173ebb98a91831d',1,'term.h']]],
-  ['refcnoflags_1606',['RefcNoFlags',['../term_8h.html#ada026bf2d0a66c550271f757eef36e1fad83c288ca310e2fb8ea0c452e804900f',1,'term.h']]]
+  ['interopbadarg_2140',['InteropBadArg',['../interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8ab526f8f6007bfe26363ad880fbf38c38',1,'interop.h']]],
+  ['interopmemoryallocfail_2141',['InteropMemoryAllocFail',['../interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8aa0caf1a1b32bceb916c3cf7ad11e6ca6',1,'interop.h']]],
+  ['interopok_2142',['InteropOk',['../interop_8h.html#a3f8762f470fb4c0f30adf31db71049f8ab9f38b2cce76a588f209e68e3cb24c13',1,'interop.h']]],
+  ['invalidfunctiontype_2143',['InvalidFunctionType',['../exportedfunction_8h.html#a42a11575cc237e37732d560240e04371a17375da3e313c48ca20c7812da101981',1,'exportedfunction.h']]]
 ];

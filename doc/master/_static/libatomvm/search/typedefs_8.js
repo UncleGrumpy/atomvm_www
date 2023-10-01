@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['term_1561',['term',['../term__typedef_8h.html#a603769ce1e8eeb1faa458d7e6cf904d8',1,'term_typedef.h']]],
-  ['term_5fref_1562',['term_ref',['../ccontext_8h.html#a225fdcb7560c6c4ab16dd43e7c60163e',1,'ccontext.h']]],
-  ['timer_5fwheel_5fcallback_5ft_1563',['timer_wheel_callback_t',['../timer__wheel_8h.html#a3e29bc2b0297cb10a3a34939b9743b2d',1,'timer_wheel.h']]]
+  ['interop_5fchardata_5ffold_5ffun_2071',['interop_chardata_fold_fun',['../interop_8h.html#aa7c6a37c604717cd0a15a099224a50db',1,'interop.h']]],
+  ['interop_5fchardata_5frest_5ffun_2072',['interop_chardata_rest_fun',['../interop_8h.html#a6ca083db17faad88c5e003d010e55dd5',1,'interop.h']]]
 ];

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module etest &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Module etest &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -99,6 +99,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">Module etest</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/etest/etest.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -107,9 +108,9 @@
            <div itemprop="articleBody">
              
   <section id="module-etest">
-<h1>Module etest<a class="headerlink" href="#module-etest" title="Permalink to this heading"></a></h1>
+<h1>Module etest<a class="headerlink" href="#module-etest" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="../estdlib/string.html#description"><span class="std std-ref">Description</span></a></p></li>
+<li><p><a class="reference internal" href="../estdlib/unicode.html#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="#index"><span class="xref myst">Function Index</span></a></p></li>
 <li><p><a class="reference internal" href="../../../memory-management.html#functions"><span class="std std-ref">Function Details</span></a></p></li>
 </ul>
@@ -117,15 +118,15 @@
 libraries.</p>
 <p><a name="index"></a></p>
 <section id="function-index">
-<h2>Function Index<a class="headerlink" href="#function-index" title="Permalink to this heading"></a></h2>
+<h2>Function Index<a class="headerlink" href="#function-index" title="Link to this heading"></a></h2>
 <table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#assert_equals-2">assert_equals/2</a></td><td></td></tr><tr><td valign="top"><a href="#assert_failure-1">assert_failure/1</a></td><td></td></tr><tr><td valign="top"><a href="#assert_failure-2">assert_failure/2</a></td><td></td></tr><tr><td valign="top"><a href="#assert_match-2">assert_match/2</a></td><td></td></tr><tr><td valign="top"><a href="#assert_true-1">assert_true/1</a></td><td></td></tr><tr><td valign="top"><a href="#test-1">test/1</a></td><td>    Test a sequence of test modules.</td></tr></table>
 <p><a name="functions"></a></p>
 </section>
 <section id="function-details">
-<h2>Function Details<a class="headerlink" href="#function-details" title="Permalink to this heading"></a></h2>
+<h2>Function Details<a class="headerlink" href="#function-details" title="Link to this heading"></a></h2>
 <p><a name="assert_equals-2"></a></p>
 <section id="assert-equals-2">
-<h3>assert_equals/2<a class="headerlink" href="#assert-equals-2" title="Permalink to this heading"></a></h3>
+<h3>assert_equals/2<a class="headerlink" href="#assert-equals-2" title="Link to this heading"></a></h3>
 <pre><code>
 assert_equals(X::term(), Y::term()) -&gt; ok | fail
 </code></pre>
@@ -135,7 +136,7 @@ assert_equals(X::term(), Y::term()) -&gt; ok | fail
 <p><a name="assert_failure-1"></a></p>
 </section>
 <section id="assert-failure-1">
-<h3>assert_failure/1<a class="headerlink" href="#assert-failure-1" title="Permalink to this heading"></a></h3>
+<h3>assert_failure/1<a class="headerlink" href="#assert-failure-1" title="Link to this heading"></a></h3>
 <pre><code>
 assert_failure(F::function()) -&gt; ok | fail
 </code></pre>
@@ -145,7 +146,7 @@ assert_failure(F::function()) -&gt; ok | fail
 <p><a name="assert_failure-2"></a></p>
 </section>
 <section id="assert-failure-2">
-<h3>assert_failure/2<a class="headerlink" href="#assert-failure-2" title="Permalink to this heading"></a></h3>
+<h3>assert_failure/2<a class="headerlink" href="#assert-failure-2" title="Link to this heading"></a></h3>
 <pre><code>
 assert_failure(F::function(), Error::atom()) -&gt; ok | fail
 </code></pre>
@@ -155,7 +156,7 @@ assert_failure(F::function(), Error::atom()) -&gt; ok | fail
 <p><a name="assert_match-2"></a></p>
 </section>
 <section id="assert-match-2">
-<h3>assert_match/2<a class="headerlink" href="#assert-match-2" title="Permalink to this heading"></a></h3>
+<h3>assert_match/2<a class="headerlink" href="#assert-match-2" title="Link to this heading"></a></h3>
 <pre><code>
 assert_match(X::term(), X2::term()) -&gt; ok | fail
 </code></pre>
@@ -165,7 +166,7 @@ assert_match(X::term(), X2::term()) -&gt; ok | fail
 <p><a name="assert_true-1"></a></p>
 </section>
 <section id="assert-true-1">
-<h3>assert_true/1<a class="headerlink" href="#assert-true-1" title="Permalink to this heading"></a></h3>
+<h3>assert_true/1<a class="headerlink" href="#assert-true-1" title="Link to this heading"></a></h3>
 <pre><code>
 assert_true(X1::boolean()) -&gt; ok | fail
 </code></pre>
@@ -174,7 +175,7 @@ assert_true(X1::boolean()) -&gt; ok | fail
 <p><a name="test-1"></a></p>
 </section>
 <section id="test-1">
-<h3>test/1<a class="headerlink" href="#test-1" title="Permalink to this heading"></a></h3>
+<h3>test/1<a class="headerlink" href="#test-1" title="Link to this heading"></a></h3>
 <pre><code>
 test(Tests::[module()]) -&gt; ok | fail
 </code></pre>
@@ -239,56 +240,16 @@ returns the atom fail.</p>
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

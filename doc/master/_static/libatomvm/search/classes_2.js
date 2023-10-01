@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ccontext_1090',['CContext',['../struct_c_context.html',1,'']]],
-  ['context_1091',['Context',['../struct_context.html',1,'']]],
-  ['contextaccumulator_1092',['ContextAccumulator',['../struct_context_accumulator.html',1,'']]]
+  ['bif_1427',['Bif',['../struct_bif.html',1,'']]],
+  ['builtinatomrequestsignal_1428',['BuiltInAtomRequestSignal',['../struct_built_in_atom_request_signal.html',1,'']]],
+  ['builtinatomsignal_1429',['BuiltInAtomSignal',['../struct_built_in_atom_signal.html',1,'']]]
 ];

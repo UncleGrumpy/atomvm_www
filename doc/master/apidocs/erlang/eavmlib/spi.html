@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module spi &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Module spi &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -69,15 +69,16 @@
 <li class="toctree-l4"><a class="reference internal" href="atomvm.html">Module atomvm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="avm_pubsub.html">Module avm_pubsub</a></li>
 <li class="toctree-l4"><a class="reference internal" href="console.html">Module console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="emscripten.html">Module emscripten</a></li>
 <li class="toctree-l4"><a class="reference internal" href="esp.html">Module esp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio.html">Module gpio</a></li>
 <li class="toctree-l4"><a class="reference internal" href="http_server.html">Module http_server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c.html">Module i2c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json_encoder.html">Module json_encoder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ledc.html">Module ledc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logger.html">Module logger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network.html">Module network</a></li>
 <li class="toctree-l4"><a class="reference internal" href="network_fsm.html">Module network_fsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pico.html">Module pico</a></li>
 <li class="toctree-l4"><a class="reference internal" href="port.html">Module port</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Module spi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="timestamp_util.html">Module timestamp_util</a></li>
@@ -114,6 +115,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">Module spi</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/eavmlib/spi.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -122,9 +124,9 @@
            <div itemprop="articleBody">
              
   <section id="module-spi">
-<h1>Module spi<a class="headerlink" href="#module-spi" title="Permalink to this heading"></a></h1>
+<h1>Module spi<a class="headerlink" href="#module-spi" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="../estdlib/string.html#description"><span class="std std-ref">Description</span></a></p></li>
+<li><p><a class="reference internal" href="../estdlib/unicode.html#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="../../libatomvm/types.html#types"><span class="std std-ref">Data Types</span></a></p></li>
 <li><p><a class="reference internal" href="#index"><span class="xref myst">Function Index</span></a></p></li>
 <li><p><a class="reference internal" href="../../../memory-management.html#functions"><span class="std std-ref">Function Details</span></a></p></li>
@@ -134,7 +136,7 @@
 supported on many devices.</p>
 <p><a name="description"></a></p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p>This module currently support the SPI “leader” (historically known as the “master”) interface, allowing
 the leader to connect to one or more “follower” (historically known as “slave”) devices.</p>
 <p>Users interact with this interface by creating an instance of the driver via the <code class="docutils literal notranslate"><span class="pre">open/1</span></code> function,
@@ -147,51 +149,51 @@ or simultaneously read from and write to the device in a single transaction.
 <a name="types"></a></p>
 </section>
 <section id="data-types">
-<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this heading"></a></h2>
+<h2>Data Types<a class="headerlink" href="#data-types" title="Link to this heading"></a></h2>
 <section id="address">
-<h3><a name="type-address">address()</a><a class="headerlink" href="#address" title="Permalink to this heading"></a></h3>
+<h3><a name="type-address">address()</a><a class="headerlink" href="#address" title="Link to this heading"></a></h3>
 <pre><code>
 address() = non_neg_integer()
 </code></pre>
 </section>
 <section id="bus-config">
-<h3><a name="type-bus_config">bus_config()</a><a class="headerlink" href="#bus-config" title="Permalink to this heading"></a></h3>
+<h3><a name="type-bus_config">bus_config()</a><a class="headerlink" href="#bus-config" title="Link to this heading"></a></h3>
 <pre><code>
 bus_config() = [{miso_io_num, non_neg_integer()} | {mosi_io_num, non_neg_integer()} | {sclk_io_num, non_neg_integer()} | {spi_peripheral, <a href="#type-spi_peripheral">spi_peripheral()</a>}]
 </code></pre>
 </section>
 <section id="device-config">
-<h3><a name="type-device_config">device_config()</a><a class="headerlink" href="#device-config" title="Permalink to this heading"></a></h3>
+<h3><a name="type-device_config">device_config()</a><a class="headerlink" href="#device-config" title="Link to this heading"></a></h3>
 <pre><code>
 device_config() = [{clock_speed_hz, non_neg_integer()} | {mode, 0..3} | {spi_cs_io_num, non_neg_integer()} | {address_len_bits, 0..64} | {command_len_bits, 0..16}]
 </code></pre>
 </section>
 <section id="device-name">
-<h3><a name="type-device_name">device_name()</a><a class="headerlink" href="#device-name" title="Permalink to this heading"></a></h3>
+<h3><a name="type-device_name">device_name()</a><a class="headerlink" href="#device-name" title="Link to this heading"></a></h3>
 <pre><code>
 device_name() = atom()
 </code></pre>
 </section>
 <section id="params">
-<h3><a name="type-params">params()</a><a class="headerlink" href="#params" title="Permalink to this heading"></a></h3>
+<h3><a name="type-params">params()</a><a class="headerlink" href="#params" title="Link to this heading"></a></h3>
 <pre><code>
 params() = [{bus_config, <a href="#type-bus_config">bus_config()</a>} | {device_config, [{<a href="#type-device_name">device_name()</a>, <a href="#type-device_config">device_config()</a>}]}]
 </code></pre>
 </section>
 <section id="spi">
-<h3><a name="type-spi">spi()</a><a class="headerlink" href="#spi" title="Permalink to this heading"></a></h3>
+<h3><a name="type-spi">spi()</a><a class="headerlink" href="#spi" title="Link to this heading"></a></h3>
 <pre><code>
 spi() = pid()
 </code></pre>
 </section>
 <section id="spi-peripheral">
-<h3><a name="type-spi_peripheral">spi_peripheral()</a><a class="headerlink" href="#spi-peripheral" title="Permalink to this heading"></a></h3>
+<h3><a name="type-spi_peripheral">spi_peripheral()</a><a class="headerlink" href="#spi-peripheral" title="Link to this heading"></a></h3>
 <pre><code>
 spi_peripheral() = hspi | vspi
 </code></pre>
 </section>
 <section id="transaction">
-<h3><a name="type-transaction">transaction()</a><a class="headerlink" href="#transaction" title="Permalink to this heading"></a></h3>
+<h3><a name="type-transaction">transaction()</a><a class="headerlink" href="#transaction" title="Link to this heading"></a></h3>
 <pre><code>
 transaction() = #{command =&gt; integer(), address =&gt; non_neg_integer(), write_data =&gt; binary(), write_bits =&gt; non_neg_integer(), read_bits =&gt; non_neg_integer()}
 </code></pre>
@@ -199,15 +201,15 @@ transaction() = #{command =&gt; integer(), address =&gt; non_neg_integer(), writ
 </section>
 </section>
 <section id="function-index">
-<h2>Function Index<a class="headerlink" href="#function-index" title="Permalink to this heading"></a></h2>
-<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#close-1">close/1</a></td><td>    Close the SPI driver.</td></tr><tr><td valign="top"><a href="#open-1">open/1</a></td><td>Open a connection to the SPI driver.</td></tr><tr><td valign="top"><a href="#read_at-4">read_at/4</a></td><td>    Read a value from and address on the device.</td></tr><tr><td valign="top"><a href="#write-3">write/3</a></td><td>    Write data to the SPI device, using the intructions encoded in the supplied transaction.</td></tr><tr><td valign="top"><a href="#write_at-5">write_at/5</a></td><td>    Write a value to and address on the device.</td></tr><tr><td valign="top"><a href="#write_read-3">write_read/3</a></td><td>    Write data to the SPI device, using the intructions encoded in the supplied transaction.</td></tr></table>
+<h2>Function Index<a class="headerlink" href="#function-index" title="Link to this heading"></a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#close-1">close/1</a></td><td>    Close the SPI driver.</td></tr><tr><td valign="top"><a href="#open-1">open/1</a></td><td>Open a connection to the SPI driver.</td></tr><tr><td valign="top"><a href="#read_at-4">read_at/4</a></td><td>    Read a value from and address on the device.</td></tr><tr><td valign="top"><a href="#write-3">write/3</a></td><td>    Write data to the SPI device, using the instructions encoded in the supplied transaction.</td></tr><tr><td valign="top"><a href="#write_at-5">write_at/5</a></td><td>    Write a value to and address on the device.</td></tr><tr><td valign="top"><a href="#write_read-3">write_read/3</a></td><td>    Write data to the SPI device, using the instructions encoded in the supplied transaction.</td></tr></table>
 <p><a name="functions"></a></p>
 </section>
 <section id="function-details">
-<h2>Function Details<a class="headerlink" href="#function-details" title="Permalink to this heading"></a></h2>
+<h2>Function Details<a class="headerlink" href="#function-details" title="Link to this heading"></a></h2>
 <p><a name="close-1"></a></p>
 <section id="close-1">
-<h3>close/1<a class="headerlink" href="#close-1" title="Permalink to this heading"></a></h3>
+<h3>close/1<a class="headerlink" href="#close-1" title="Link to this heading"></a></h3>
 <pre><code>
 close(SPI::<a href="#type-spi">spi()</a>) -&gt; ok
 </code></pre>
@@ -219,7 +221,7 @@ close(SPI::<a href="#type-spi">spi()</a>) -&gt; ok
 <p><a name="open-1"></a></p>
 </section>
 <section id="open-1">
-<h3>open/1<a class="headerlink" href="#open-1" title="Permalink to this heading"></a></h3>
+<h3>open/1<a class="headerlink" href="#open-1" title="Link to this heading"></a></h3>
 <pre><code>
 open(Params::<a href="#type-params">params()</a>) -&gt; <a href="#type-spi">spi()</a>
 </code></pre>
@@ -288,25 +290,25 @@ understand which fields should be used with your device.</p>
 <p><a name="read_at-4"></a></p>
 </section>
 <section id="read-at-4">
-<h3>read_at/4<a class="headerlink" href="#read-at-4" title="Permalink to this heading"></a></h3>
+<h3>read_at/4<a class="headerlink" href="#read-at-4" title="Link to this heading"></a></h3>
 <pre><code>
-read_at(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Address::<a href="#type-address">address()</a>, Len::non_neg_integer()) -&gt; {ok, integer()} | error
+read_at(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Address::<a href="#type-address">address()</a>, Len::non_neg_integer()) -&gt; {ok, integer()} | {error, Reason::term()}
 </code></pre>
 <br />
-<p><code class="docutils literal notranslate"><span class="pre">SPI</span></code>: SPI instance created via <code class="docutils literal notranslate"><span class="pre">open/1</span></code><br /><code class="docutils literal notranslate"><span class="pre">Address</span></code>: SPI Address from which to read<br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">SPI</span></code>: SPI instance created via <code class="docutils literal notranslate"><span class="pre">open/1</span></code><br /><code class="docutils literal notranslate"><span class="pre">DeviceName</span></code>: device name from configuration<br /><code class="docutils literal notranslate"><span class="pre">Address</span></code>: SPI Address from which to read<br /><code class="docutils literal notranslate"><span class="pre">Len</span></code>: in bytes to read<br /></p>
 <p>returns: <code class="docutils literal notranslate"><span class="pre">{ok,</span> <span class="pre">Value}</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code></p>
 <p>Read a value from and address on the device.</p>
 <p><a name="write-3"></a></p>
 </section>
 <section id="write-3">
-<h3>write/3<a class="headerlink" href="#write-3" title="Permalink to this heading"></a></h3>
+<h3>write/3<a class="headerlink" href="#write-3" title="Link to this heading"></a></h3>
 <pre><code>
 write(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Transaction::<a href="#type-transaction">transaction()</a>) -&gt; ok | {error, Reason::term()}
 </code></pre>
 <br />
 <p><code class="docutils literal notranslate"><span class="pre">SPI</span></code>: SPI instance created via <code class="docutils literal notranslate"><span class="pre">open/1</span></code><br /><code class="docutils literal notranslate"><span class="pre">DeviceName</span></code>: SPI device name (use key in <code class="docutils literal notranslate"><span class="pre">device_config</span></code>)<br /><code class="docutils literal notranslate"><span class="pre">Transaction</span></code>: transaction map.<br /></p>
 <p>returns: <code class="docutils literal notranslate"><span class="pre">ok</span></code> or <code class="docutils literal notranslate"><span class="pre">{error,</span> <span class="pre">Reason}</span></code>, if an error occurred.</p>
-<p>Write data to the SPI device, using the intructions encoded in the supplied transaction.</p>
+<p>Write data to the SPI device, using the instructions encoded in the supplied transaction.</p>
 <p>The supplied <code class="docutils literal notranslate"><span class="pre">Transaction</span></code> encodes information about how data is to be written to the selected SPI device.
 See the description above for the fields that may be specified in this map.</p>
 <p>When a binary is supplied in the <code class="docutils literal notranslate"><span class="pre">write_data</span></code> field, the data is written to the
@@ -321,12 +323,12 @@ The returned reason term is implementation-defined.</p>
 <p><a name="write_at-5"></a></p>
 </section>
 <section id="write-at-5">
-<h3>write_at/5<a class="headerlink" href="#write-at-5" title="Permalink to this heading"></a></h3>
+<h3>write_at/5<a class="headerlink" href="#write-at-5" title="Link to this heading"></a></h3>
 <pre><code>
-write_at(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Address::<a href="#type-address">address()</a>, Len::non_neg_integer(), Data::integer()) -&gt; {ok, integer()} | error
+write_at(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Address::<a href="#type-address">address()</a>, Len::non_neg_integer(), Data::integer()) -&gt; {ok, integer()} | {error, Reason::term()}
 </code></pre>
 <br />
-<p><code class="docutils literal notranslate"><span class="pre">SPI</span></code>: SPI instance created via <code class="docutils literal notranslate"><span class="pre">open/1</span></code><br /><code class="docutils literal notranslate"><span class="pre">Address</span></code>: SPI Address to which to write<br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">SPI</span></code>: SPI instance created via <code class="docutils literal notranslate"><span class="pre">open/1</span></code><br /><code class="docutils literal notranslate"><span class="pre">DeviceName</span></code>: device name from configuration<br /><code class="docutils literal notranslate"><span class="pre">Address</span></code>: SPI Address to which to write<br /><code class="docutils literal notranslate"><span class="pre">Len</span></code>: in bytes to read<br /><code class="docutils literal notranslate"><span class="pre">Data</span></code>: byte(s) to write<br /></p>
 <p>returns: <code class="docutils literal notranslate"><span class="pre">{ok,</span> <span class="pre">Value}</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code></p>
 <p>Write a value to and address on the device.</p>
 <p>The value returned from this function is dependent on the device and address.
@@ -335,14 +337,14 @@ values from this function.</p>
 <p><a name="write_read-3"></a></p>
 </section>
 <section id="write-read-3">
-<h3>write_read/3<a class="headerlink" href="#write-read-3" title="Permalink to this heading"></a></h3>
+<h3>write_read/3<a class="headerlink" href="#write-read-3" title="Link to this heading"></a></h3>
 <pre><code>
-write_read(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Transaction::<a href="#type-transaction">transaction()</a>) -&gt; {ok, ReadData::binary()} | error
+write_read(SPI::<a href="#type-spi">spi()</a>, DeviceName::<a href="#type-device_name">device_name()</a>, Transaction::<a href="#type-transaction">transaction()</a>) -&gt; {ok, ReadData::binary()} | {error, Reason::term()}
 </code></pre>
 <br />
 <p><code class="docutils literal notranslate"><span class="pre">SPI</span></code>: SPI instance created via <code class="docutils literal notranslate"><span class="pre">open/1</span></code><br /><code class="docutils literal notranslate"><span class="pre">DeviceName</span></code>: SPI device name (use key in <code class="docutils literal notranslate"><span class="pre">device_config</span></code>)<br /><code class="docutils literal notranslate"><span class="pre">Transaction</span></code>: transaction.<br /></p>
 <p>returns: <code class="docutils literal notranslate"><span class="pre">{ok,</span> <span class="pre">binary()}</span></code> or <code class="docutils literal notranslate"><span class="pre">{error,</span> <span class="pre">Reason}</span></code>, if an error occurred.</p>
-<p>Write data to the SPI device, using the intructions encoded in the supplied transaction.
+<p>Write data to the SPI device, using the instructions encoded in the supplied transaction.
 device, and simultaneously read data back from the device, returning the read data in a binary.</p>
 <p>The supplied <code class="docutils literal notranslate"><span class="pre">Transaction</span></code> encodes information about how data is to be written to the selected SPI device.
 See the description above for the fields that may be specified in this map.</p>
@@ -408,56 +410,16 @@ The returned reason term is implementation-defined.</p>
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

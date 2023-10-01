@@ -1,20 +1,9 @@
 var searchData=
 [
-  ['magic_1464',['magic',['../struct____attribute____.html#a70332140f11d7774f748e4902ae87937',1,'__attribute__']]],
-  ['mailbox_1465',['mailbox',['../struct_context.html#a81d49e78c3ae403dd267d13955c407b6',1,'Context']]],
-  ['mailbox_5flist_5fhead_1466',['mailbox_list_head',['../struct_message.html#a6ed972cc0beab3860bc6a2caea64e9f7',1,'Message']]],
-  ['max_5fheap_5fsize_1467',['max_heap_size',['../struct_context.html#a9182737457d76114944ac3f53842f38c',1,'Context']]],
-  ['message_1468',['message',['../struct_message.html#a40a61ae087846ebb34002bf9a21cd42b',1,'Message']]],
-  ['min_5fheap_5fsize_1469',['min_heap_size',['../struct_context.html#aa72fc5a718a54be78b4a02607b56ffc9',1,'Context']]],
-  ['module_5fatom_5findex_1470',['module_atom_index',['../struct_unresolved_function_call.html#ab4620fba814eb424146c69a569169ad6',1,'UnresolvedFunctionCall']]],
-  ['module_5findex_1471',['module_index',['../struct_module.html#a8cd453e547353ece3f1f8a30d20c22cd',1,'Module']]],
-  ['module_5fplatform_5fdata_1472',['module_platform_data',['../struct_module.html#a6cd4fe61c92aa82edcd4ec85871a7ec8',1,'Module']]],
-  ['modules_5fby_5findex_1473',['modules_by_index',['../struct_global_context.html#a6c2730188c0e2420550cf146c2c50af8',1,'GlobalContext']]],
-  ['modules_5ftable_1474',['modules_table',['../struct_global_context.html#a716f3183f425747796c3d40dc7d4292c',1,'GlobalContext']]],
-  ['monitor_5flist_5fhead_1475',['monitor_list_head',['../struct_monitor.html#acaa70c1ff6cf59869bdc1b68717acb11',1,'Monitor']]],
-  ['monitor_5fpid_1476',['monitor_pid',['../struct_monitor.html#a5b0580fac0b9be217e39da8600bd36a8',1,'Monitor']]],
-  ['monitors_5fhead_1477',['monitors_head',['../struct_context.html#a60423fe338828bff9a14ded5d34bb5b0',1,'Context']]],
-  ['monotonic_5ftime_1478',['monotonic_time',['../struct_timer_wheel.html#aa3efa6aa65715357514696d3176a6c1d',1,'TimerWheel']]],
-  ['msg_5fmemory_5fsize_1479',['msg_memory_size',['../struct_message.html#a517c730df28efdb15b0ada771e40f049',1,'Message']]],
-  ['mso_5flist_1480',['mso_list',['../struct_context.html#a07f58a9bf94c57ac40f70acfc96ebbc3',1,'Context::mso_list()'],['../struct_message.html#ab3db63faba864e688016809761e49266',1,'Message::mso_list()']]]
+  ['name_1952',['name',['../struct_i_f_f_record.html#af52750556e9a6dfebb5e1705b686178b',1,'IFFRecord::name()'],['../struct_resource_type.html#a47b8ff9922e14107482d423f6cf1669a',1,'ResourceType::name()']]],
+  ['name_5fatom_5fid_1953',['name_atom_id',['../struct_a_v_m_pack_data.html#ac0dc7adb4994abca1e9270e9408a5740',1,'AVMPackData']]],
+  ['native_5fhandler_1954',['native_handler',['../struct_context.html#aa77a5906553bf50e66cc182ec13e80e8',1,'Context']]],
+  ['next_1955',['next',['../struct_h_node.html#abea8de3dcee2d732142001b8eb698050',1,'HNode::next()'],['../struct_list_head.html#a2855fe0dde7716a90cd54fae55ceaa54',1,'ListHead::next()'],['../struct_mailbox_message.html#a212b0488c8ca53dea8e4d0a457ac4e55',1,'MailboxMessage::next()'],['../struct_heap_fragment.html#ae79dea89d799d22b0ee98540464810a4',1,'HeapFragment::next()']]],
+  ['next_5ftimer_1956',['next_timer',['../struct_timer_list.html#a0d2122af9a3acce326a173a9c7484600',1,'TimerList']]],
+  ['nif_5fptr_1957',['nif_ptr',['../struct_nif.html#adfa56a469bc3591bd32eaf6d8061ba58',1,'Nif']]]
 ];

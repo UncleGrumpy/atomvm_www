@@ -66,7 +66,10 @@ $(function() {
 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>T_DEST_REG
-: <a class="el" href="opcodesswitch_8h.html#a770ed50fbf747bece3472bd4ea3761d8">opcodesswitch.h</a>
+: <a class="el" href="opcodesswitch_8h.html#a6fb719b056730fc0330c70bbe079afcc">opcodesswitch.h</a>
+</li>
+<li>T_DEST_REG_GC_SAFE
+: <a class="el" href="opcodesswitch_8h.html#a3f9464114a6bd609d9ac8c66cb4c4ddc">opcodesswitch.h</a>
 </li>
 <li>TAG_COMPACT_ATOM
 : <a class="el" href="module_8c.html#a401763e925e75c212ebd68ad7e648f04">module.c</a>
@@ -79,6 +82,15 @@ $(function() {
 </li>
 <li>TAG_EXTENDED_INT
 : <a class="el" href="module_8c.html#a9cd3814d30b9883373295f151ba7507a">module.c</a>
+</li>
+<li>TERM_BINARY_DATA_SIZE_IN_TERMS
+: <a class="el" href="term_8h.html#adfa86b880e3b348bbb41dbf83f7ef344">term.h</a>
+</li>
+<li>TERM_BINARY_HEAP_SIZE
+: <a class="el" href="term_8h.html#ae07ae98c4c74527a7fd541b550febb8c">term.h</a>
+</li>
+<li>TERM_BINARY_SIZE_IS_HEAP
+: <a class="el" href="term_8h.html#a6f1058d95a28e93daf0334bb2344567c">term.h</a>
 </li>
 <li>TERM_BITS
 : <a class="el" href="term__typedef_8h.html#ae8ace58dccdbd1bb1de525b726f523aa">term_typedef.h</a>
@@ -112,6 +124,9 @@ $(function() {
 </li>
 <li>TERM_BOXED_REFC_BINARY_SIZE
 : <a class="el" href="term_8h.html#adc43e28eefc7de4868bfa810a25fea9c">term.h</a>
+</li>
+<li>TERM_BOXED_RESOURCE_SIZE
+: <a class="el" href="term_8h.html#a0e4f0056d3a7627395877f2f992b5bf1">term.h</a>
 </li>
 <li>TERM_BOXED_SUB_BINARY
 : <a class="el" href="term_8h.html#a68df9325323d217fa5e90ee2cc310707">term.h</a>
@@ -149,8 +164,14 @@ $(function() {
 <li>TERM_MAP_NOT_FOUND
 : <a class="el" href="term_8h.html#ac5b9e2d39d00df1a1017a470d40b5a21">term.h</a>
 </li>
+<li>TERM_RESERVED_MARKER
+: <a class="el" href="term_8h.html#ac307b174fc487c3de6b43b31db3dc482">term.h</a>
+</li>
 <li>TERM_U_FMT
 : <a class="el" href="term__typedef_8h.html#a55a2ace34d7abc51eadcb9a556934a60">term_typedef.h</a>
+</li>
+<li>TERM_UNUSED
+: <a class="el" href="term_8h.html#a1a63be50154df3e221b90b902c9c185d">term.h</a>
 </li>
 <li>TERM_X_FMT
 : <a class="el" href="term__typedef_8h.html#a382ac4c3c73ba8311da0069c6f109a1a">term_typedef.h</a>
@@ -169,6 +190,12 @@ $(function() {
 </li>
 <li>TO_ATOMSHASHTABLE_VALUE
 : <a class="el" href="atomshashtable_8h.html#a121a7ea6e889967087df3f53d942e151">atomshashtable.h</a>
+</li>
+<li>TOTAL_HEAP_SIZE_ATOM
+: <a class="el" href="defaultatoms_8h.html#a16c7f2a4b73d23cd89de2a2fad2953d7">defaultatoms.h</a>
+</li>
+<li>TOTAL_HEAP_SIZE_ATOM_INDEX
+: <a class="el" href="defaultatoms_8h.html#aa1ac0e6e8f648e9dbf0997f3a3e63dee">defaultatoms.h</a>
 </li>
 <li>TRACE
 : <a class="el" href="trace_8h.html#a5f6aa8edcd99914757600b5d3b259bb7">trace.h</a>
@@ -212,15 +239,38 @@ $(function() {
 <li>TUPLE_SIZE
 : <a class="el" href="term_8h.html#a476d7e8af59a33c4b1a710660e8edd61">term.h</a>
 </li>
+<li>TYPEDEF_CONDVAR
+: <a class="el" href="smp_8h.html#a888abd017c402c9b87977f75d422bec9">smp.h</a>
+</li>
 <li>TYPEDEF_CONTEXT
-: <a class="el" href="memory_8h.html#aa00cc9554ecc1111be8ff0734d298498">memory.h</a>
+: <a class="el" href="mailbox_8h.html#aa00cc9554ecc1111be8ff0734d298498">mailbox.h</a>
+, <a class="el" href="memory_8h.html#aa00cc9554ecc1111be8ff0734d298498">memory.h</a>
+, <a class="el" href="refc__binary_8h.html#aa00cc9554ecc1111be8ff0734d298498">refc_binary.h</a>
 </li>
 <li>TYPEDEF_GLOBALCONTEXT
-: <a class="el" href="term_8h.html#ae255fde495724a05463b14aaafe1cb94">term.h</a>
+: <a class="el" href="memory_8h.html#ae255fde495724a05463b14aaafe1cb94">memory.h</a>
+, <a class="el" href="resources_8h.html#ae255fde495724a05463b14aaafe1cb94">resources.h</a>
+, <a class="el" href="smp_8h.html#ae255fde495724a05463b14aaafe1cb94">smp.h</a>
+</li>
+<li>TYPEDEF_HEAP
+: <a class="el" href="memory_8h.html#a0dbd68b9ca478035d468e30c9a55cce9">memory.h</a>
+, <a class="el" href="mailbox_8h.html#a0dbd68b9ca478035d468e30c9a55cce9">mailbox.h</a>
 </li>
 <li>TYPEDEF_MODULE
 : <a class="el" href="exportedfunction_8h.html#a1729c476b09d3d1eabb3c0e64b8c4186">exportedfunction.h</a>
 , <a class="el" href="globalcontext_8h.html#a1729c476b09d3d1eabb3c0e64b8c4186">globalcontext.h</a>
+</li>
+<li>TYPEDEF_MUTEX
+: <a class="el" href="smp_8h.html#aceae6c68326fdc07734407f717957656">smp.h</a>
+</li>
+<li>TYPEDEF_RWLOCK
+: <a class="el" href="atomshashtable_8h.html#a36e5de066aac693d5bcda908448c1187">atomshashtable.h</a>
+, <a class="el" href="smp_8h.html#a36e5de066aac693d5bcda908448c1187">smp.h</a>
+, <a class="el" href="synclist_8h.html#a36e5de066aac693d5bcda908448c1187">synclist.h</a>
+, <a class="el" href="valueshashtable_8h.html#a36e5de066aac693d5bcda908448c1187">valueshashtable.h</a>
+</li>
+<li>TYPEDEF_SPINLOCK
+: <a class="el" href="smp_8h.html#ac5c33f0f3702baebc303edd317c39c72">smp.h</a>
 </li>
 </ul>
 </div><!-- contents -->

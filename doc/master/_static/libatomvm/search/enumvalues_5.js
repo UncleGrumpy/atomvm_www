@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nativeendianinteger_1602',['NativeEndianInteger',['../bitstring_8h.html#a5ed0ea1dd997c35aab7df0e23b577c65a20937275c04b1229c890117a6bb1a24d',1,'bitstring.h']]],
-  ['niffunctiontype_1603',['NIFFunctionType',['../exportedfunction_8h.html#a42a11575cc237e37732d560240e04371a520690de440ea0d9cf76b05340b418a4',1,'exportedfunction.h']]],
-  ['noflags_1604',['NoFlags',['../context_8h.html#a5c9a39ccda8c700b8722f9027ef63f1da58023b588aa8366442fc981c45b9a1b0',1,'context.h']]]
+  ['gcbiffunctiontype_2138',['GCBIFFunctionType',['../exportedfunction_8h.html#a42a11575cc237e37732d560240e04371a2dac22d5c2102d0609bcb652a75b359d',1,'exportedfunction.h']]],
+  ['gcsignal_2139',['GCSignal',['../mailbox_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a3489e81b7f9576c0fb83b4608220978f',1,'mailbox.h']]]
 ];

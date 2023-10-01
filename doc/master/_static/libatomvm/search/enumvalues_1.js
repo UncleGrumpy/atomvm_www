@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['external_5fterm_5fbad_5farg_1581',['EXTERNAL_TERM_BAD_ARG',['../externalterm_8h.html#a7b610ef1bb7437f006b44fb6c2c5b173ac087ab3016f10c876cffa4ee1db08145',1,'externalterm.h']]],
-  ['external_5fterm_5fheap_5falloc_1582',['EXTERNAL_TERM_HEAP_ALLOC',['../externalterm_8h.html#a7b610ef1bb7437f006b44fb6c2c5b173a8e8bae3a4997144f2e359209fafd44ba',1,'externalterm.h']]],
-  ['external_5fterm_5fmalloc_1583',['EXTERNAL_TERM_MALLOC',['../externalterm_8h.html#a7b610ef1bb7437f006b44fb6c2c5b173a5c70846a1c32d1a0cef84b284fb0f785',1,'externalterm.h']]],
-  ['external_5fterm_5fok_1584',['EXTERNAL_TERM_OK',['../externalterm_8h.html#a7b610ef1bb7437f006b44fb6c2c5b173aa8a9828ad6169d0edc07811accaa7699',1,'externalterm.h']]],
-  ['externaltermnoopts_1585',['ExternalTermNoOpts',['../externalterm_8h.html#af6168d43e9676554af376320c5f8caa2a23d9d0c8a9bec63f823e2c0cc87e1193',1,'externalterm.h']]],
-  ['externaltermtoheapfragment_1586',['ExternalTermToHeapFragment',['../externalterm_8h.html#af6168d43e9676554af376320c5f8caa2ac87298fcf7134b4892d4e069b5218ba4',1,'externalterm.h']]]
+  ['biffunctiontype_2116',['BIFFunctionType',['../exportedfunction_8h.html#a42a11575cc237e37732d560240e04371ad468b00b00cd226f774f3062ec5da79e',1,'exportedfunction.h']]],
+  ['boundedfreeheapgrowth_2117',['BoundedFreeHeapGrowth',['../context_8h.html#a053c657189d44e4f53476798cc850191a6a4f9435a0475b7f850a951ff7a7082b',1,'context.h']]]
 ];

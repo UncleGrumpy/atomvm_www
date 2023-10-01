@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module timer &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Module timer &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,15 +14,15 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="The eavmlib library" href="../eavmlib/README.html" />
+    <link rel="next" title="Module unicode" href="unicode.html" />
     <link rel="prev" title="Module supervisor" href="supervisor.html" /> 
 </head>
 
@@ -66,8 +66,12 @@
 <li class="toctree-l3 current"><a class="reference internal" href="../../../api-reference-documentation.html#estdlib">estdlib</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="README.html">The estdlib library</a></li>
 <li class="toctree-l4"><a class="reference internal" href="base64.html">Module base64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="binary.html">Module binary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="calendar.html">Module calendar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code.html">Module code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="crypto.html">Module crypto</a></li>
 <li class="toctree-l4"><a class="reference internal" href="erlang.html">Module erlang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="erts_debug.html">Module erts_debug</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gen_event.html">Module gen_event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gen_server.html">Module gen_server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gen_statem.html">Module gen_statem</a></li>
@@ -77,12 +81,14 @@
 <li class="toctree-l4"><a class="reference internal" href="io.html">Module io</a></li>
 <li class="toctree-l4"><a class="reference internal" href="io_lib.html">Module io_lib</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lists.html">Module lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logger.html">Module logger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="maps.html">Module maps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="math.html">Module math</a></li>
 <li class="toctree-l4"><a class="reference internal" href="proplists.html">Module proplists</a></li>
 <li class="toctree-l4"><a class="reference internal" href="string.html">Module string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="supervisor.html">Module supervisor</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Module timer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicode.html">Module unicode</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api-reference-documentation.html#eavmlib">eavmlib</a></li>
@@ -116,6 +122,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">Module timer</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/estdlib/timer.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -124,26 +131,38 @@
            <div itemprop="articleBody">
              
   <section id="module-timer">
-<h1>Module timer<a class="headerlink" href="#module-timer" title="Permalink to this heading"></a></h1>
+<h1>Module timer<a class="headerlink" href="#module-timer" title="Link to this heading"></a></h1>
 <ul class="simple">
+<li><p><a class="reference internal" href="unicode.html#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="#index"><span class="xref myst">Function Index</span></a></p></li>
 <li><p><a class="reference internal" href="../../../memory-management.html#functions"><span class="std std-ref">Function Details</span></a></p></li>
 </ul>
-<p><a name="index"></a></p>
+<p>An implementation of the Erlang/OTP timer interface.</p>
+<p><a name="description"></a></p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>This module implements a strict subset of the Erlang/OTP timer
+interface.<a name="index"></a></p>
+</section>
 <section id="function-index">
-<h2>Function Index<a class="headerlink" href="#function-index" title="Permalink to this heading"></a></h2>
-<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#sleep-1">sleep/1</a></td><td></td></tr></table>
+<h2>Function Index<a class="headerlink" href="#function-index" title="Link to this heading"></a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#sleep-1">sleep/1</a></td><td>Pauses the execution of the current process for a given number of
+milliseconds, or forever, using <code>infinity</code> as the parameter.</td></tr></table>
 <p><a name="functions"></a></p>
 </section>
 <section id="function-details">
-<h2>Function Details<a class="headerlink" href="#function-details" title="Permalink to this heading"></a></h2>
+<h2>Function Details<a class="headerlink" href="#function-details" title="Link to this heading"></a></h2>
 <p><a name="sleep-1"></a></p>
 <section id="sleep-1">
-<h3>sleep/1<a class="headerlink" href="#sleep-1" title="Permalink to this heading"></a></h3>
+<h3>sleep/1<a class="headerlink" href="#sleep-1" title="Link to this heading"></a></h3>
 <pre><code>
-sleep(Timeout::non_neg_integer() | infinity) -&gt; ok
+sleep(Timeout::timeout()) -&gt; ok
 </code></pre>
 <br />
+<p><code class="docutils literal notranslate"><span class="pre">Timeout</span></code>: number of milliseconds to sleep or <code class="docutils literal notranslate"><span class="pre">infinity</span></code><br /></p>
+<p>returns: <code class="docutils literal notranslate"><span class="pre">ok</span></code></p>
+<p>Pauses the execution of the current process for a given number of
+milliseconds, or forever, using <code class="docutils literal notranslate"><span class="pre">infinity</span></code> as the parameter.</p>
 </section>
 </section>
 </section>
@@ -153,7 +172,7 @@ sleep(Timeout::non_neg_integer() | infinity) -&gt; ok
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="supervisor.html" class="btn btn-neutral float-left" title="Module supervisor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../eavmlib/README.html" class="btn btn-neutral float-right" title="The eavmlib library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="unicode.html" class="btn btn-neutral float-right" title="Module unicode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -195,56 +214,16 @@ sleep(Timeout::non_neg_integer() | infinity) -&gt; ok
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

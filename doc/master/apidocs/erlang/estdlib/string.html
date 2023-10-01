@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Module string &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Module string &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -66,8 +66,12 @@
 <li class="toctree-l3 current"><a class="reference internal" href="../../../api-reference-documentation.html#estdlib">estdlib</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="README.html">The estdlib library</a></li>
 <li class="toctree-l4"><a class="reference internal" href="base64.html">Module base64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="binary.html">Module binary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="calendar.html">Module calendar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code.html">Module code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="crypto.html">Module crypto</a></li>
 <li class="toctree-l4"><a class="reference internal" href="erlang.html">Module erlang</a></li>
+<li class="toctree-l4"><a class="reference internal" href="erts_debug.html">Module erts_debug</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gen_event.html">Module gen_event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gen_server.html">Module gen_server</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gen_statem.html">Module gen_statem</a></li>
@@ -77,12 +81,14 @@
 <li class="toctree-l4"><a class="reference internal" href="io.html">Module io</a></li>
 <li class="toctree-l4"><a class="reference internal" href="io_lib.html">Module io_lib</a></li>
 <li class="toctree-l4"><a class="reference internal" href="lists.html">Module lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logger.html">Module logger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="maps.html">Module maps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="math.html">Module math</a></li>
 <li class="toctree-l4"><a class="reference internal" href="proplists.html">Module proplists</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Module string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="supervisor.html">Module supervisor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="timer.html">Module timer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicode.html">Module unicode</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api-reference-documentation.html#eavmlib">eavmlib</a></li>
@@ -116,6 +122,7 @@
           <li class="breadcrumb-item"><a href="../../../api-reference-documentation.html">API Reference Documentation</a></li>
       <li class="breadcrumb-item active">Module string</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/erlang/estdlib/string.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -124,50 +131,115 @@
            <div itemprop="articleBody">
              
   <section id="module-string">
-<h1>Module string<a class="headerlink" href="#module-string" title="Permalink to this heading"></a></h1>
+<h1>Module string<a class="headerlink" href="#module-string" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="#description"><span class="std std-ref">Description</span></a></p></li>
+<li><p><a class="reference internal" href="unicode.html#description"><span class="std std-ref">Description</span></a></p></li>
 <li><p><a class="reference internal" href="#index"><span class="xref myst">Function Index</span></a></p></li>
 <li><p><a class="reference internal" href="../../../memory-management.html#functions"><span class="std std-ref">Function Details</span></a></p></li>
 </ul>
 <p>An implementation of the Erlang/OTP string interface.</p>
 <p><a name="description"></a></p>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
-<p>This module implements a strict susbset of the Erlang/OTP string
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>This module implements a strict subset of the Erlang/OTP string
 interface.<a name="index"></a></p>
 </section>
 <section id="function-index">
-<h2>Function Index<a class="headerlink" href="#function-index" title="Permalink to this heading"></a></h2>
-<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#split-2">split/2</a></td><td></td></tr><tr><td valign="top"><a href="#split-3">split/3</a></td><td></td></tr><tr><td valign="top"><a href="#to_upper-1">to_upper/1</a></td><td></td></tr><tr><td valign="top"><a href="#trim-1">trim/1</a></td><td></td></tr><tr><td valign="top"><a href="#trim-2">trim/2</a></td><td></td></tr></table>
+<h2>Function Index<a class="headerlink" href="#function-index" title="Link to this heading"></a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#split-2">split/2</a></td><td>Equivalent to <a href="#split-3"><tt>split(String, Pattern, leading)</tt></a>.</td></tr><tr><td valign="top"><a href="#split-3">split/3</a></td><td>Splits String where SearchPattern is encountered and return the remaining parts.</td></tr><tr><td valign="top"><a href="#to_lower-1">to_lower/1</a></td><td>Convert string or character to uppercase.</td></tr><tr><td valign="top"><a href="#to_upper-1">to_upper/1</a></td><td>Convert string or character to uppercase.</td></tr><tr><td valign="top"><a href="#trim-1">trim/1</a></td><td>Equivalent to <a href="#trim-2"><tt>trim(String, both)</tt></a>.</td></tr><tr><td valign="top"><a href="#trim-2">trim/2</a></td><td>Returns a string, where leading or trailing, or both, whitespace has been removed.</td></tr></table>
 <p><a name="functions"></a></p>
 </section>
 <section id="function-details">
-<h2>Function Details<a class="headerlink" href="#function-details" title="Permalink to this heading"></a></h2>
+<h2>Function Details<a class="headerlink" href="#function-details" title="Link to this heading"></a></h2>
 <p><a name="split-2"></a></p>
 <section id="split-2">
-<h3>split/2<a class="headerlink" href="#split-2" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">split(String,</span> <span class="pre">Pattern)</span> <span class="pre">-&gt;</span> <span class="pre">any()</span></code></p>
+<h3>split/2<a class="headerlink" href="#split-2" title="Link to this heading"></a></h3>
+<pre><code>
+split(String::string(), Pattern::string()) -&gt; string() | char()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">String</span></code>: a string to split<br /><code class="docutils literal notranslate"><span class="pre">Pattern</span></code>: the search pattern to split at<br /></p>
+<p>returns: chardata</p>
+<p>Equivalent to <a class="reference internal" href="#split-3"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">split(String,</span> <span class="pre">Pattern,</span> <span class="pre">leading)</span></code></span></a>.</p>
 <p><a name="split-3"></a></p>
 </section>
 <section id="split-3">
-<h3>split/3<a class="headerlink" href="#split-3" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">split(String,</span> <span class="pre">Pattern,</span> <span class="pre">Where)</span> <span class="pre">-&gt;</span> <span class="pre">any()</span></code></p>
+<h3>split/3<a class="headerlink" href="#split-3" title="Link to this heading"></a></h3>
+<pre><code>
+split(String::string(), Pattern::string() | char(), Where::atom()) -&gt; string() | char()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">String</span></code>: a string to split<br /><code class="docutils literal notranslate"><span class="pre">Pattern</span></code>: the search pattern to split at<br /><code class="docutils literal notranslate"><span class="pre">Where</span></code>: position to split (leading, trailing, or all)<br /></p>
+<p>returns: chardata</p>
+<p>Splits String where SearchPattern is encountered and return the remaining parts.</p>
+<p>Where, default leading, indicates whether the leading, the trailing or all encounters of SearchPattern will split String.</p>
+<p>Example:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="mi">0</span><span class="o">&gt;</span><span class="w"> </span><span class="n">string</span><span class="o">:</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;ab..bc..cd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;..&quot;</span><span class="p">).</span>
+<span class="w">  </span><span class="p">[</span><span class="s">&quot;ab&quot;</span><span class="p">,</span><span class="s">&quot;bc..cd&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">string</span><span class="o">:</span><span class="n">split</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="s">&quot;ab..bc..cd&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;..&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">trailing</span><span class="p">).</span>
+<span class="w">  </span><span class="p">[</span><span class="o">&lt;&lt;</span><span class="s">&quot;ab..bc&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="o">&lt;&lt;</span><span class="s">&quot;cd&quot;</span><span class="o">&gt;&gt;</span><span class="p">]</span>
+<span class="w">  </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">string</span><span class="o">:</span><span class="n">split</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="s">&quot;ab..bc....cd&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;..&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">all</span><span class="p">).</span>
+<span class="w">  </span><span class="p">[</span><span class="o">&lt;&lt;</span><span class="s">&quot;ab&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="o">&lt;&lt;</span><span class="s">&quot;bc&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="o">&lt;&lt;&gt;&gt;</span><span class="p">,</span><span class="o">&lt;&lt;</span><span class="s">&quot;cd&quot;</span><span class="o">&gt;&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><a name="to_lower-1"></a></p>
+</section>
+<section id="to-lower-1">
+<h3>to_lower/1<a class="headerlink" href="#to-lower-1" title="Link to this heading"></a></h3>
+<pre><code>
+to_lower(Input::string() | char()) -&gt; string() | char()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">Input</span></code>: a string or character to convert<br /></p>
+<p>returns: a Character or string</p>
+<p>Convert string or character to uppercase.</p>
+<p>The specified string or character is case-converted. Notice that the supported character
+set is ISO/IEC 8859-1 (also called Latin 1); all values outside this set are unchanged</p>
 <p><a name="to_upper-1"></a></p>
 </section>
 <section id="to-upper-1">
-<h3>to_upper/1<a class="headerlink" href="#to-upper-1" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">to_upper(S)</span> <span class="pre">-&gt;</span> <span class="pre">any()</span></code></p>
+<h3>to_upper/1<a class="headerlink" href="#to-upper-1" title="Link to this heading"></a></h3>
+<pre><code>
+to_upper(Input::string() | char()) -&gt; string() | char()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">Input</span></code>: a string or character to convert<br /></p>
+<p>returns: a Character or string</p>
+<p>Convert string or character to uppercase.</p>
+<p>The specified string or character is case-converted. Notice that the supported character
+set is ISO/IEC 8859-1 (also called Latin 1); all values outside this set are unchanged</p>
 <p><a name="trim-1"></a></p>
 </section>
 <section id="trim-1">
-<h3>trim/1<a class="headerlink" href="#trim-1" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">trim(String)</span> <span class="pre">-&gt;</span> <span class="pre">any()</span></code></p>
+<h3>trim/1<a class="headerlink" href="#trim-1" title="Link to this heading"></a></h3>
+<pre><code>
+trim(String::string()) -&gt; string() | char()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">String</span></code>: a string or character to trim whitespace<br /></p>
+<p>returns: a Character or string</p>
+<p>Equivalent to <a class="reference internal" href="#trim-2"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">trim(String,</span> <span class="pre">both)</span></code></span></a>.</p>
 <p><a name="trim-2"></a></p>
 </section>
 <section id="trim-2">
-<h3>trim/2<a class="headerlink" href="#trim-2" title="Permalink to this heading"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">trim(String,</span> <span class="pre">X2)</span> <span class="pre">-&gt;</span> <span class="pre">any()</span></code></p>
+<h3>trim/2<a class="headerlink" href="#trim-2" title="Link to this heading"></a></h3>
+<pre><code>
+trim(String::string, Direction::atom()) -&gt; string() | char()
+</code></pre>
+<br />
+<p><code class="docutils literal notranslate"><span class="pre">String</span></code>: a string or character to trim<br /><code class="docutils literal notranslate"><span class="pre">Direction</span></code>: an atom indicating the direction from which to remove whitespace<br /></p>
+<p>returns: a Character or string</p>
+<p>Returns a string, where leading or trailing, or both, whitespace has been removed.</p>
+<p>If omitted, Direction is both.</p>
+<p>Example:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">string</span><span class="o">:</span><span class="n">trim</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">  Hello  </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">).</span>
+<span class="w">  </span><span class="s">&quot;Hello&quot;</span>
+<span class="w">  </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">string</span><span class="o">:</span><span class="n">trim</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">  Hello  </span><span class="se">\n</span><span class="s">&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">leading</span><span class="p">).</span>
+<span class="w">  </span><span class="o">&lt;&lt;</span><span class="s">&quot;Hello  </span><span class="se">\n</span><span class="s">&quot;</span><span class="o">&gt;&gt;</span>
+<span class="w">  </span><span class="mi">3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">string</span><span class="o">:</span><span class="n">trim</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="s">&quot;.Hello.</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">trailing</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">.&quot;</span><span class="p">).</span>
+<span class="w">  </span><span class="o">&lt;&lt;</span><span class="s">&quot;.Hello&quot;</span><span class="o">&gt;&gt;</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -219,56 +291,16 @@ interface.<a name="index"></a></p>
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

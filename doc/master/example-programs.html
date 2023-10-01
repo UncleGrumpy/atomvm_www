@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example Programs &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>Example Programs &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -121,6 +121,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Example Programs</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterexample-programs.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -133,29 +134,29 @@
  SPDX-License-Identifier: Apache-2.0 OR LGPL-2.1-or-later
 -->
 <section id="example-programs">
-<h1>Example Programs<a class="headerlink" href="#example-programs" title="Permalink to this heading"></a></h1>
+<h1>Example Programs<a class="headerlink" href="#example-programs" title="Link to this heading"></a></h1>
 <p>AtomVM includes a collection of useful examples for getting started.  This section describes what these examples do, and how to run them, for example, on an ESP32 device.</p>
 <section id="erlang-examples">
-<h2>Erlang Examples<a class="headerlink" href="#erlang-examples" title="Permalink to this heading"></a></h2>
+<h2>Erlang Examples<a class="headerlink" href="#erlang-examples" title="Link to this heading"></a></h2>
 <p>Erlang examples may be run in the UNIX shell or on supported microcontroller devices.</p>
 <section id="hello-world">
-<h3><code class="docutils literal notranslate"><span class="pre">hello_world</span></code><a class="headerlink" href="#hello-world" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">hello_world</span></code><a class="headerlink" href="#hello-world" title="Link to this heading"></a></h3>
 <p>This example program prints the string “Hello World” and quits.</p>
 <section id="command-line">
-<h4>Command line<a class="headerlink" href="#command-line" title="Permalink to this heading"></a></h4>
+<h4>Command line<a class="headerlink" href="#command-line" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">hello_world.avm</span></code> file will get created as part of a build.  This file may be supplied as an argument to the <code class="docutils literal notranslate"><span class="pre">AtomVM</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./src/AtomVM ./examples/erlang/hello_world.avm
-Hello World
+hello_world
 Return value: ok
 </pre></div>
 </div>
 </section>
 </section>
 <section id="udp-server">
-<h3><code class="docutils literal notranslate"><span class="pre">udp_server</span></code><a class="headerlink" href="#udp-server" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">udp_server</span></code><a class="headerlink" href="#udp-server" title="Link to this heading"></a></h3>
 <p>This example program listens on UDP port 44444 and will print information about the received message, including the source IP, (ephemeral) source port, and packet received, to the console.</p>
 <section id="id1">
-<h4>Command line<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<h4>Command line<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">udp_server.avm</span></code> file will get created as part of a build.  This file may be supplied as an argument to the <code class="docutils literal notranslate"><span class="pre">AtomVM</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./src/AtomVM ./examples/erlang/udp_server.avm
 Opened UDP socket on &quot;0.0.0.0:44404&quot;.
@@ -181,11 +182,11 @@ Waiting to receive data...
 </section>
 </section>
 <section id="udp-client">
-<h3><code class="docutils literal notranslate"><span class="pre">udp_client</span></code><a class="headerlink" href="#udp-client" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">udp_client</span></code><a class="headerlink" href="#udp-client" title="Link to this heading"></a></h3>
 <p>This example program send the packet of data (“:アトムＶＭ”) over UDP to port 44444 on the loopback address every 5 seconds, in a loop.  The program will print a period (<code class="docutils literal notranslate"><span class="pre">.</span></code>) to the console, every time it sends a message.</p>
 <p>This command may be used in tandem with the <code class="docutils literal notranslate"><span class="pre">udp_server</span></code> program to illustrate sending messages between AtomVM processes over UDP.</p>
 <section id="id2">
-<h4>Command line<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<h4>Command line<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">udp_client.avm</span></code> file will get created as part of a build.  This file may be supplied as an argument to the <code class="docutils literal notranslate"><span class="pre">AtomVM</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./src/AtomVM ./examples/erlang/udp_client.avm
 Opened UDP socket on &quot;0.0.0.0:63665&quot;.
@@ -211,10 +212,10 @@ Waiting to receive data...
 </section>
 </section>
 <section id="tcp-server">
-<h3><code class="docutils literal notranslate"><span class="pre">tcp_server</span></code><a class="headerlink" href="#tcp-server" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">tcp_server</span></code><a class="headerlink" href="#tcp-server" title="Link to this heading"></a></h3>
 <p>This example program listens on TCP port 44404 and accept connections on that port.  Once accepted, it will wait for packets to be sent from the client.  Once received, the server will print the packet received to the console, and then echo the packet back to the calling client.</p>
 <section id="id3">
-<h4>Command line<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<h4>Command line<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">tcp_server.avm</span></code> file will get created as part of a build.  This file may be supplied as an argument to the <code class="docutils literal notranslate"><span class="pre">AtomVM</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./src/AtomVM ./examples/erlang/tcp_server.avm
 Listening on &quot;0.0.0.0:44404&quot;.
@@ -253,14 +254,14 @@ Waiting to receive data...
 </section>
 </section>
 <section id="tcp-client">
-<h3><code class="docutils literal notranslate"><span class="pre">tcp_client</span></code><a class="headerlink" href="#tcp-client" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">tcp_client</span></code><a class="headerlink" href="#tcp-client" title="Link to this heading"></a></h3>
 <p>This example program send the packet of data (“:アトムＶＭ”) over TCP to port 44404 on the loopback address every 1 second, in a loop.  The program will wait for a response from the server, before proceeding.</p>
 <p>This command may be used in tandem with the <code class="docutils literal notranslate"><span class="pre">tcp_server</span></code> program to illustrate sending messages between AtomVM processes over TCP.</p>
 <blockquote>
 <div><p>Note.  You will need to change the <code class="docutils literal notranslate"><span class="pre">Address</span></code> variable in the <code class="docutils literal notranslate"><span class="pre">tcp_client.erl</span></code> program in order to test against an AtomVM server running on a different host or device.</p>
 </div></blockquote>
 <section id="id4">
-<h4>Command line<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<h4>Command line<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">tcp_client.avm</span></code> file will get created as part of a build.  This file may be supplied as an argument to the <code class="docutils literal notranslate"><span class="pre">AtomVM</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./src/AtomVM ./examples/erlang/tcp_client.avm
 Connected to &quot;127.0.0.1:44404&quot; from &quot;127.0.0.1:56741&quot;
@@ -294,11 +295,11 @@ Waiting to receive data...
 </section>
 </section>
 <section id="esp32-examples">
-<h2>ESP32 Examples<a class="headerlink" href="#esp32-examples" title="Permalink to this heading"></a></h2>
+<h2>ESP32 Examples<a class="headerlink" href="#esp32-examples" title="Link to this heading"></a></h2>
 <p>AtomVM includes examples that are specifically designed for the ESP32 and other microcontrollers.</p>
 </section>
 <section id="flashing-atomvm-examples-for-esp32">
-<h2>Flashing AtomVM Examples for ESP32<a class="headerlink" href="#flashing-atomvm-examples-for-esp32" title="Permalink to this heading"></a></h2>
+<h2>Flashing AtomVM Examples for ESP32<a class="headerlink" href="#flashing-atomvm-examples-for-esp32" title="Link to this heading"></a></h2>
 <p>In order to run the ESP32 examples, you will need to flash the example AVM files that are created as part of the build to your device.</p>
 <p>In the remainder of this document, we assume the <code class="docutils literal notranslate"><span class="pre">flash.sh</span></code> script, located in the <code class="docutils literal notranslate"><span class="pre">tools/dev</span></code> directory of the AtomVM source tree.</p>
 <blockquote>
@@ -325,7 +326,7 @@ ets Jun  8 2016 00:22:57
 </pre></div>
 </div>
 <section id="blink">
-<h3><code class="docutils literal notranslate"><span class="pre">blink</span></code><a class="headerlink" href="#blink" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">blink</span></code><a class="headerlink" href="#blink" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">blink</span></code> example will turn the blue LED on an ESP32 SoC (pin 2) on and off, once every second.</p>
 <p>Flash the example program to your device as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./tools/dev/flash.sh build/examples/erlang/esp32/blink.avm
@@ -336,7 +337,7 @@ Hard resetting via RTS pin...
 <p>You should see the blue LED turn on and off on your ESP32 device.</p>
 </section>
 <section id="esp-random">
-<h3><code class="docutils literal notranslate"><span class="pre">esp_random</span></code><a class="headerlink" href="#esp-random" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">esp_random</span></code><a class="headerlink" href="#esp-random" title="Link to this heading"></a></h3>
 <p>This demo program illustrates use of the ESP32 <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">restart</span></code>, and <code class="docutils literal notranslate"><span class="pre">reset_reason</span></code> functions.</p>
 <p>The program will generate a random binary of a random size (at most 127 bytes) every 5 seconds.  If a 0-length byte sequence is generated (1:128 probability), the ESP will restart.</p>
 <p>Flash the example program to your device as follows:</p>
@@ -372,7 +373,7 @@ Random bytes: &lt;&lt;155,174,204,143,232,202,136,...,118,177,77,230,10,21,72,91
 </div>
 </section>
 <section id="esp-nvs">
-<h3><code class="docutils literal notranslate"><span class="pre">esp_nvs</span></code><a class="headerlink" href="#esp-nvs" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">esp_nvs</span></code><a class="headerlink" href="#esp-nvs" title="Link to this heading"></a></h3>
 <p>This demo program illustrates the use of ESP32 non-volatile storage (NVS).</p>
 <p>The program will store the number of times the device has been rebooted, along with the start time, in NVS.</p>
 <p>Flash the example program to your device as follows:</p>
@@ -407,7 +408,7 @@ going to sleep forever..
 </div>
 </section>
 <section id="reformat-nvs">
-<h3><code class="docutils literal notranslate"><span class="pre">reformat_nvs</span></code><a class="headerlink" href="#reformat-nvs" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">reformat_nvs</span></code><a class="headerlink" href="#reformat-nvs" title="Link to this heading"></a></h3>
 <p>This demo program will reformat the non-volatile storage (NVS) partition.</p>
 <p>Flash the example program to your device as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>shell$ ./tools/dev/flash.sh build/examples/erlang/esp32/reformat_nvs.avm
@@ -433,7 +434,7 @@ going to sleep forever..
 </div></blockquote>
 </section>
 <section id="set-network-config">
-<h3><code class="docutils literal notranslate"><span class="pre">set_network_config</span></code><a class="headerlink" href="#set-network-config" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">set_network_config</span></code><a class="headerlink" href="#set-network-config" title="Link to this heading"></a></h3>
 <p>This demo program can be used to set the WIFI credentials in NVS.  Setting WIFI credentials in NVS can greatly simplify the task of running ESP programs that require connectivity to WIFI networks.</p>
 <blockquote>
 <div><p>Note.  Credentials are stored unencrypted and in plaintext and should not be considered secure.  Future versions may use encrypted NVS storage.</p>
@@ -462,7 +463,7 @@ going to sleep forever..
 <p>You may now run programs that use your WIFI network (see below) without needing to enter WIFI credentials.</p>
 </section>
 <section id="sta-network">
-<h3><code class="docutils literal notranslate"><span class="pre">sta_network</span></code><a class="headerlink" href="#sta-network" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">sta_network</span></code><a class="headerlink" href="#sta-network" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">sta_network</span></code> example will connect to your local WiFi network and obtain and IP address.  Once a connection is established, a <code class="docutils literal notranslate"><span class="pre">connected</span></code> message will be displayed.  Once an IP address is obtained, the device IP address, netmask, and gateway will be displayed on the console.</p>
 <blockquote>
 <div><p>Note.  AtomVM currently only supports station mode (STA).</p>
@@ -515,7 +516,7 @@ connected
 </div>
 </section>
 <section id="udp-server-blink">
-<h3><code class="docutils literal notranslate"><span class="pre">udp_server_blink</span></code><a class="headerlink" href="#udp-server-blink" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">udp_server_blink</span></code><a class="headerlink" href="#udp-server-blink" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">udp_server_blink</span></code> example will connect to your local WiFi network and obtain and IP address.  It will then start a UDP server on port 44444.  When a UDP message is received, the blue LED on the ESP32 SoC (pin 2) will toggle on and off.</p>
 <blockquote>
 <div><p>Note.  AtomVM currently only supports station mode (STA).</p>
@@ -580,7 +581,7 @@ Waiting to receive data...
 </div>
 </section>
 <section id="tcp-server-blink">
-<h3><code class="docutils literal notranslate"><span class="pre">tcp_server_blink</span></code><a class="headerlink" href="#tcp-server-blink" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">tcp_server_blink</span></code><a class="headerlink" href="#tcp-server-blink" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">tcp_server_blink</span></code> example will connect to your local WiFi network and obtain and IP address.  It will then start a TCP server on port 44404.  When a TCP message is received, the blue LED on the ESP32 SoC (pin 2) will toggle on and off.</p>
 <blockquote>
 <div><p>Note.  AtomVM currently only supports station mode (STA).</p>
@@ -702,56 +703,16 @@ Waiting to receive data...
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       

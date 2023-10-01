@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printerfun_1120',['PrinterFun',['../struct_printer_fun.html',1,'']]]
+  ['nif_1468',['Nif',['../struct_nif.html',1,'']]]
 ];

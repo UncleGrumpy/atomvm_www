@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>atom.c &mdash; AtomVM 0.6.0-dev+git.4f1db7e documentation</title>
+  <title>atom.c &mdash; AtomVM 0.6.0-alpha.1+git.8c6d36da documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -14,11 +14,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=f15c78dc"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -76,7 +76,6 @@
 <li class="toctree-l4"><a class="reference internal" href="bif.h.html">bif.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="bitstring.c.html">bitstring.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="bitstring.h.html">bitstring.h</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ccontext.h.html">ccontext.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="context.c.html">context.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="context.h.html">context.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="debug.c.html">debug.c</a></li>
@@ -85,6 +84,8 @@
 <li class="toctree-l4"><a class="reference internal" href="defaultatoms.h.html">defaultatoms.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dictionary.c.html">dictionary.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dictionary.h.html">dictionary.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="erl_nif.h.html">erl_nif.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="erl_nif_priv.h.html">erl_nif_priv.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exportedfunction.h.html">exportedfunction.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="externalterm.c.html">externalterm.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="externalterm.h.html">externalterm.h</a></li>
@@ -94,8 +95,8 @@
 <li class="toctree-l4"><a class="reference internal" href="iff.h.html">iff.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="interop.c.html">interop.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="interop.h.html">interop.h</a></li>
-<li class="toctree-l4"><a class="reference internal" href="linkedlist.h.html">linkedlist.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="list.h.html">list.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="listeners.h.html">listeners.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mailbox.c.html">mailbox.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mailbox.h.html">mailbox.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="memory.c.html">memory.c</a></li>
@@ -110,19 +111,25 @@
 <li class="toctree-l4"><a class="reference internal" href="platform_nifs.h.html">platform_nifs.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="port.c.html">port.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="port.h.html">port.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="posix_nifs.c.html">posix_nifs.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="posix_nifs.h.html">posix_nifs.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="refc_binary.c.html">refc_binary.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="refc_binary.h.html">refc_binary.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.c.html">resources.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.h.html">resources.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="scheduler.c.html">scheduler.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="scheduler.h.html">scheduler.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smp.h.html">smp.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stacktrace.c.html">stacktrace.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stacktrace.h.html">stacktrace.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="synclist.h.html">synclist.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sys.h.html">sys.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tempstack.h.html">tempstack.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term.c.html">term.c</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term.h.html">term.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term_typedef.h.html">term_typedef.h</a></li>
-<li class="toctree-l4"><a class="reference internal" href="timer_wheel.c.html">timer_wheel.c</a></li>
-<li class="toctree-l4"><a class="reference internal" href="timer_wheel.h.html">timer_wheel.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer_list.c.html">timer_list.c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer_list.h.html">timer_list.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="trace.h.html">trace.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="utils.h.html">utils.h</a></li>
 <li class="toctree-l4"><a class="reference internal" href="valueshashtable.c.html">valueshashtable.c</a></li>
@@ -158,6 +165,7 @@
           <li class="breadcrumb-item"><a href="../../../c_api_docs.html">libAtomVM</a></li>
       <li class="breadcrumb-item active">atom.c</li>
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/atomvm/AtomVM/blob/masterapidocs/libatomvm/files/atom.c.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -166,12 +174,12 @@
            <div itemprop="articleBody">
              
   <section id="atom-c">
-<h1>atom.c<a class="headerlink" href="#atom-c" title="Permalink to this heading"></a></h1>
+<h1>atom.c<a class="headerlink" href="#atom-c" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <p>Include dependency graph for atom.c:</p>
 <figure class="align-default">
-<div align="center" class="align-center"><div class="graphviz"><img src="../../../_images/graphviz-ee796186b3babf22e26870cf0f668b5465d143b1.png" alt="digraph {
+<div align="center" class="align-center"><div class="graphviz"><img src="../../../_images/graphviz-624f8cf472d92d2a85bfc31e536ab0407e10c84e.png" alt="digraph {
     graph [bgcolor=&quot;#00000000&quot;]
     node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
     edge [color=&quot;#1414CE&quot;]
@@ -180,6 +188,7 @@
     &quot;3&quot; [label=&quot;stdint.h&quot; tooltip=&quot;stdint.h&quot;]
     &quot;4&quot; [label=&quot;stdlib.h&quot; tooltip=&quot;stdlib.h&quot;]
     &quot;7&quot; [label=&quot;utils.h&quot; tooltip=&quot;utils.h&quot;]
+    &quot;8&quot; [label=&quot;stddef.h&quot; tooltip=&quot;stddef.h&quot;]
     &quot;6&quot; [label=&quot;string.h&quot; tooltip=&quot;string.h&quot;]
     &quot;5&quot; [label=&quot;stdio.h&quot; tooltip=&quot;stdio.h&quot;]
     &quot;1&quot; -&gt; &quot;2&quot; [dir=forward tooltip=&quot;include&quot;]
@@ -189,24 +198,25 @@
     &quot;1&quot; -&gt; &quot;7&quot; [dir=forward tooltip=&quot;include&quot;]
     &quot;2&quot; -&gt; &quot;3&quot; [dir=forward tooltip=&quot;include&quot;]
     &quot;2&quot; -&gt; &quot;4&quot; [dir=forward tooltip=&quot;include&quot;]
+    &quot;7&quot; -&gt; &quot;8&quot; [dir=forward tooltip=&quot;include&quot;]
 }" class="graphviz" /></div>
 </div>
 </figure>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv416atom_string_to_c10AtomStringPci">
-<span id="_CPPv316atom_string_to_c10AtomStringPci"></span><span id="_CPPv216atom_string_to_c10AtomStringPci"></span><span id="atom_string_to_c__AtomString.cP.i"></span><span class="target" id="atom_8c_1a6057513f5765055084abd2c6b87d3a08"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atom_string_to_c</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">atom_string</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bufsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416atom_string_to_c10AtomStringPci" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv416atom_string_to_c10AtomStringPc6size_t">
+<span id="_CPPv316atom_string_to_c10AtomStringPc6size_t"></span><span id="_CPPv216atom_string_to_c10AtomStringPc6size_t"></span><span id="atom_string_to_c__AtomString.cP.s"></span><span class="target" id="atom_8c_1a0456e98b453228ac8fc77381d4b629e3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atom_string_to_c</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">atom_string</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bufsize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416atom_string_to_c10AtomStringPc6size_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv415atom_are_equals10AtomString10AtomString">
-<span id="_CPPv315atom_are_equals10AtomString10AtomString"></span><span id="_CPPv215atom_are_equals10AtomString10AtomString"></span><span id="atom_are_equals__AtomString.AtomString"></span><span class="target" id="atom_8c_1a33a42361e4c6c386a40e29ad01252d20"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atom_are_equals</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415atom_are_equals10AtomString10AtomString" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv315atom_are_equals10AtomString10AtomString"></span><span id="_CPPv215atom_are_equals10AtomString10AtomString"></span><span id="atom_are_equals__AtomString.AtomString"></span><span class="target" id="atom_8c_1a33a42361e4c6c386a40e29ad01252d20"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atom_are_equals</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415atom_are_equals10AtomString10AtomString" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv414atom_write_mfaPc6size_t10AtomString10AtomStringi">
-<span id="_CPPv314atom_write_mfaPc6size_t10AtomString10AtomStringi"></span><span id="_CPPv214atom_write_mfaPc6size_t10AtomString10AtomStringi"></span><span id="atom_write_mfa__cP.s.AtomString.AtomString.i"></span><span class="target" id="atom_8c_1a64e8933778a82c90b1ddaf3115e0e0b9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atom_write_mfa</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buf_size</span></span>, <a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">module</span></span>, <a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">function</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414atom_write_mfaPc6size_t10AtomString10AtomStringi" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv414atom_write_mfaPc6size_t10AtomString10AtomStringj">
+<span id="_CPPv314atom_write_mfaPc6size_t10AtomString10AtomStringj"></span><span id="_CPPv214atom_write_mfaPc6size_t10AtomString10AtomStringj"></span><span id="atom_write_mfa__cP.s.AtomString.AtomString.unsigned-i"></span><span class="target" id="atom_8c_1a506a5727d7bb2c949eb44b9a53102277"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atom_write_mfa</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buf_size</span></span>, <a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">module</span></span>, <a class="reference internal" href="atom.h.html#_CPPv410AtomString" title="AtomString"><span class="n"><span class="pre">AtomString</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">function</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414atom_write_mfaPc6size_t10AtomString10AtomStringj" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -259,56 +269,16 @@
         <dt>Versions</dt>
         
           
-          <dd><a href="/doc/feature-smp/">feature-smp</a></dd>
+          <dd><a href="/doc/v0.5.0/">v0.5.0</a></dd>
           
         
           
-          <dd><a href="/doc/gpio-stop/">gpio-stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/live_test/">live_test</a></dd>
+          <dd><a href="/doc/v0.6.0-alpha.0/">v0.6.0-alpha.0</a></dd>
           
         
            <strong> 
           <dd><a href="/doc/master/">master</a></dd>
            </strong> 
-        
-          
-          <dd><a href="/doc/publish_docs/">publish_docs</a></dd>
-          
-        
-          
-          <dd><a href="/doc/release-0.5/">release-0.5</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sht31.ex/">sht31.ex</a></dd>
-          
-        
-          
-          <dd><a href="/doc/smp_gpio_stop/">smp_gpio_stop</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_FP/">stm32_FP</a></dd>
-          
-        
-          
-          <dd><a href="/doc/stm32_gpio/">stm32_gpio</a></dd>
-          
-        
-          
-          <dd><a href="/doc/sys_info-otp_vers/">sys_info-otp_vers</a></dd>
-          
-        
-          
-          <dd><a href="/doc/test-workflows/">test-workflows</a></dd>
-          
-        
-          
-          <dd><a href="/doc/workflow_efficiency/">workflow_efficiency</a></dd>
-          
         
       </dl>
       
